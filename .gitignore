@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# pasta de descarte: o Cowork nao apaga arquivos na sua maquina, entao
+# arquivos antigos vao para ca. Pode apagar a pasta a mao quando quiser.
+_to_delete/

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mondaine25.github.io/NimoChat/sitemap.xml
