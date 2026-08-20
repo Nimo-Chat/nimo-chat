@@ -8,7 +8,7 @@ Estático puro. Sem framework, sem Node, sem nada rodando no servidor — são
 arquivos HTML, CSS e imagens. O gerador em Python roda só na sua máquina,
 antes do commit.
 
-**No ar em:** https://mondaine25.github.io/NimoChat/
+**No ar em:** https://nimo-chat.github.io/
 
 ## Idiomas
 
@@ -134,14 +134,19 @@ escritos em volta dessas frases, e não só da palavra solta.
 
 ## Publicar
 
-O repositório já está pronto para o **GitHub Pages**:
+O repositório precisa se chamar exatamente **`nimo-chat.github.io`** — o
+mesmo nome do host da organização `Nimo-Chat`. É essa coincidência de nome
+que faz o GitHub servir o site na raiz (`https://nimo-chat.github.io/`) em
+vez de numa subpasta.
 
-1. Repositório → **Settings** → **Pages**
-2. **Source:** Deploy from a branch
-3. **Branch:** `main`, pasta `/ (root)` → Save
+1. Repositório → **Settings** → **General** → Repository name →
+   `nimo-chat.github.io` → Rename
+2. **Settings** → **Pages**
+3. **Source:** Deploy from a branch
+4. **Branch:** `main`, pasta `/ (root)` → Save
 
 Em um ou dois minutos o site está em
-`https://mondaine25.github.io/NimoChat/`.
+`https://nimo-chat.github.io/`.
 
 O arquivo `.nojekyll` já está aqui: sem ele, o GitHub roda o Jekyll na pasta
 e ignora arquivos e diretórios que começam com underscore.
@@ -155,7 +160,7 @@ e ignora arquivos e diretórios que começam com underscore.
 2. Crie um arquivo `CNAME` na raiz, com uma linha só: `chatnimo.com`
 3. Rode `python3 construir.py` e publique.
 4. No seu provedor de domínio, crie um `CNAME` de `www` apontando para
-   `mondaine25.github.io`, e os registros `A` da raiz para os IPs do GitHub
+   `nimo-chat.github.io`, e os registros `A` da raiz para os IPs do GitHub
    Pages (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`).
 5. Em Settings → Pages, preencha o **Custom domain** e marque
    **Enforce HTTPS**.
@@ -168,9 +173,9 @@ github.io e o Google indexa o endereço antigo.
 
 Enquanto o domínio não chega:
 
-- Política de Privacidade: `https://mondaine25.github.io/NimoChat/privacy.html`
+- Política de Privacidade: `https://nimo-chat.github.io/privacy.html`
   (ou `/pt/privacidade.html` na ficha em português)
-- Solicitação de exclusão: `https://mondaine25.github.io/NimoChat/delete-account.html`
+- Solicitação de exclusão: `https://nimo-chat.github.io/delete-account.html`
 
 O revisor abre os dois. Confira que abrem antes de mandar o app para análise.
 

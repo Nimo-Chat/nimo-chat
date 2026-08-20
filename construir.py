@@ -45,7 +45,7 @@ CONTEUDO = RAIZ / 'conteudo'
 # todo hreflang e no sitemap. Ao registrar o domínio, troque esta linha por
 # 'https://chatnimo.com', crie o arquivo CNAME com o domínio dentro, e rode
 # o build de novo.
-SITE = 'https://mondaine25.github.io/NimoChat'
+SITE = 'https://nimo-chat.github.io'
 
 NOME = 'Nimo Chat'
 EMAIL_SUPORTE = 'suporte@chatnimo.com'
