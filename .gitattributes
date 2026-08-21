@@ -1,0 +1,8 @@
+# O gerador escreve tudo com LF. Sem esta linha, o Git no Windows converte
+# para CRLF ao gravar e mostra "arquivo inteiro modificado" a cada build.
+* text=auto eol=lf
+
+*.png  binary
+*.jpg  binary
+*.ico  binary
+*.bat  text eol=crlf

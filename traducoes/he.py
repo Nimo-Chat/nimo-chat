@@ -175,6 +175,7 @@ DADOS = {
         'termos': 'תנאי שימוש',
         'privacidade': 'מדיניות פרטיות',
         'excluir': 'מחיקת החשבון',
+        'seguranca': 'בטיחות ילדים',
     },
     'voltar': 'חזרה לדף הבית',
     'atualizado': 'עדכון אחרון',

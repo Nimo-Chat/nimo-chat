@@ -187,6 +187,7 @@ DADOS = {
         'termos': 'Kullanım Koşulları',
         'privacidade': 'Gizlilik Politikası',
         'excluir': 'Hesabını sil',
+        'seguranca': 'Çocuk Güvenliği Politikası',
     },
     'voltar': 'Ana sayfaya dön',
     'atualizado': 'Son güncelleme',

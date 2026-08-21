@@ -192,6 +192,7 @@ DADOS = {
         'termos': 'Términos de Uso',
         'privacidade': 'Política de Privacidad',
         'excluir': 'Borrar tu cuenta',
+        'seguranca': 'Seguridad Infantil',
     },
     'voltar': 'Volver al inicio',
     'atualizado': 'Última actualización',

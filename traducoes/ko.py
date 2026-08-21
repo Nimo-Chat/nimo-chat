@@ -176,6 +176,7 @@ DADOS = {
         'termos': '이용약관',
         'privacidade': '개인정보처리방침',
         'excluir': '계정 삭제',
+        'seguranca': '아동 보호 정책',
     },
     'voltar': '홈으로 돌아가기',
     'atualizado': '최종 업데이트',

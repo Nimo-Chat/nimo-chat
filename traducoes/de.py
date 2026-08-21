@@ -199,6 +199,7 @@ DADOS = {
         'termos': 'Nutzungsbedingungen',
         'privacidade': 'Datenschutzerklärung',
         'excluir': 'Konto löschen',
+        'seguranca': 'Kinderschutzrichtlinie',
     },
     'voltar': 'Zurück zur Startseite',
     'atualizado': 'Zuletzt aktualisiert',

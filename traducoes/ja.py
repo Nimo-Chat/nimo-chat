@@ -182,6 +182,7 @@ DADOS = {
         'termos': '利用規約',
         'privacidade': 'プライバシーポリシー',
         'excluir': 'アカウントの削除',
+        'seguranca': '児童保護方針',
     },
     'voltar': 'トップに戻る',
     'atualizado': '最終更新',

@@ -63,18 +63,22 @@ IDIOMA_RAIZ = 'en'
 ARQ_LEGAL = {
     'en': {'privacidade': 'privacy.html',
            'termos': 'terms.html',
-           'excluir': 'delete-account.html'},
+           'excluir': 'delete-account.html',
+           'seguranca': 'child-safety.html'},
     'pt': {'privacidade': 'privacidade.html',
            'termos': 'termos.html',
-           'excluir': 'excluir-conta.html'},
+           'excluir': 'excluir-conta.html',
+           'seguranca': 'seguranca-infantil.html'},
 }
 FONTE_LEGAL = {
     'en': {'privacidade': 'en/privacy-policy.md',
            'termos': 'en/terms-of-use.md',
-           'excluir': 'en/delete-account.md'},
+           'excluir': 'en/delete-account.md',
+           'seguranca': 'en/child-safety-standards.md'},
     'pt': {'privacidade': 'pt/politica-de-privacidade.md',
            'termos': 'pt/termos-de-uso.md',
-           'excluir': 'pt/excluir-conta.md'},
+           'excluir': 'pt/excluir-conta.md',
+           'seguranca': 'pt/padroes-de-seguranca-infantil.md'},
 }
 
 
@@ -310,6 +314,7 @@ def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld=''):
         <ul>
           <li><a href="{link_legal(cod, 'termos')}">{t['legal']['termos']}</a></li>
           <li><a href="{link_legal(cod, 'privacidade')}">{t['legal']['privacidade']}</a></li>
+          <li><a href="{link_legal(cod, 'seguranca')}">{t['legal']['seguranca']}</a></li>
           <li><a href="{link_legal(cod, 'excluir')}">{t['legal']['excluir']}</a></li>
         </ul>
       </div>
@@ -686,14 +691,14 @@ def main():
         contagem += 1
     print(f'  {len(ORDEM)} paginas iniciais')
 
-    for qual in ('privacidade', 'termos', 'excluir'):
+    for qual in ('privacidade', 'termos', 'excluir', 'seguranca'):
         grupos.append({c: ARQ_LEGAL[c][qual] for c in COM_LEGAL})
         for cod in COM_LEGAL:
             destino = RAIZ / caminho(cod, ARQ_LEGAL[cod][qual])
             destino.parent.mkdir(parents=True, exist_ok=True)
             destino.write_text(documento(cod, qual), encoding='utf-8')
             contagem += 1
-    print(f'  {len(COM_LEGAL) * 3} paginas legais')
+    print(f'  {len(COM_LEGAL) * 4} paginas legais')
 
     (RAIZ / '404.html').write_text(pagina_erro(), encoding='utf-8')
     (RAIZ / 'sitemap.xml').write_text(sitemap(grupos), encoding='utf-8')
