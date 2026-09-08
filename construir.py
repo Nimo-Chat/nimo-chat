@@ -45,7 +45,7 @@ CONTEUDO = RAIZ / 'conteudo'
 # todo hreflang e no sitemap. Ao registrar o domínio, troque esta linha por
 # 'https://chatnimo.com', crie o arquivo CNAME com o domínio dentro, e rode
 # o build de novo.
-SITE = 'https://nimo-chat.github.io'
+SITE = 'https://chatnimo.com'
 
 NOME = 'Nimo Chat'
 EMAIL_SUPORTE = 'suporte@chatnimo.com'
@@ -53,7 +53,7 @@ EMAIL_ABUSO = 'abuso@chatnimo.com'
 
 # Preencha quando cada loja aprovar o app. Enquanto estiver vazio, o botão
 # daquela loja aparece apagado, com a tarja "em breve", e não é clicável.
-LINK_PLAY = ''
+LINK_PLAY = 'https://play.google.com/store/apps/details?id=com.leonardomondaine.nimo'
 LINK_APPLE = ''
 
 IDIOMA_RAIZ = 'en'
