@@ -701,6 +701,50 @@ a.loja:hover {
   -webkit-background-clip: text; background-clip: text;
 }
 
+/* ================================================================== blog ====
+   Índice do blog (grade de cartões) e página de post -- reaproveita as
+   variáveis e os padrões de .doc / .cartao, só que com uma imagem de capa.
+   ========================================================================== */
+.blog-grade {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;
+  margin-top: 8px;
+}
+.post-cartao {
+  background: linear-gradient(168deg, var(--superficie), var(--fundo-2) 78%);
+  border: 1px solid var(--borda); border-radius: var(--raio-g);
+  overflow: hidden;
+  transition: border-color .25s var(--curva), transform .25s var(--curva);
+}
+.post-cartao:hover { border-color: rgba(46, 230, 168, .30); transform: translateY(-3px); }
+.post-cartao a { display: block; color: var(--texto); }
+.post-cartao img {
+  display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover;
+  border-bottom: 1px solid var(--borda);
+}
+.post-cartao-corpo { padding: 24px; }
+.post-data { display: block; color: var(--suave); font-size: 13px; margin-bottom: 8px; }
+.post-cartao-corpo h2 { font-size: 19px; margin: 0 0 10px; letter-spacing: -.02em; color: var(--texto); }
+.post-cartao-corpo p { margin: 0 0 14px; color: var(--texto-2); font-size: 14.5px; }
+.post-ler { color: var(--menta); font-size: 14px; font-weight: 600; }
+
+.post-capa {
+  display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: cover;
+  border-radius: var(--raio-g); border: 1px solid var(--borda); margin: 0 0 44px;
+}
+
+.post-cta {
+  margin-top: 54px; padding: 34px 30px; text-align: center;
+  border: 1px solid rgba(46, 230, 168, .30); border-radius: var(--raio-g);
+  background: rgba(46, 230, 168, .06);
+}
+.post-cta h3 { margin: 0 0 8px; color: var(--texto); }
+.post-cta p { margin: 0 0 20px; color: var(--texto-2); }
+.post-cta .lojas { justify-content: center; margin-top: 0; }
+
+@media (max-width: 620px) {
+  .blog-grade { grid-template-columns: 1fr; }
+}
+
 /* ============================================================ direita→esquerda
    Árabe e hebraico. Quase tudo já se inverte sozinho porque o layout é
    flex/grid; o que precisa de ajuste é o que foi posicionado com left/right

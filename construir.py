@@ -83,6 +83,150 @@ FONTE_LEGAL = {
 
 
 # ===========================================================================
+# Blog -- só em inglês e português por enquanto. Fica fora do textos.py de
+# propósito: aquele sistema exige as mesmas chaves nos onze idiomas
+# (conferir() falha se faltar uma só), e o blog ainda não existe nos outros
+# nove. BLOG_TEXTOS é um dicionário pequeno e paralelo, só para os dois
+# idiomas que têm posts -- não mexe em nada do textos.py.
+# ===========================================================================
+BLOG_IDIOMAS = ['en', 'pt']
+
+MESES_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+            'julho', 'agosto', 'setembro', 'outubro', 'novembro',
+            'dezembro']
+MESES_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+            'August', 'September', 'October', 'November', 'December']
+
+
+def data_extenso(cod, d):
+    if cod == 'pt':
+        return f'{d.day} de {MESES_PT[d.month - 1]} de {d.year}'
+    return f'{MESES_EN[d.month - 1]} {d.day}, {d.year}'
+
+
+BLOG_TEXTOS = {
+    'en': {
+        'nav': 'Blog',
+        'titulo_index': 'Blog — Nimo Chat',
+        'descricao_index': ('Guides and articles about anonymous chat, '
+                             'online safety, and how Nimo Chat works.'),
+        'h1': 'The Nimo Chat blog',
+        'sub': ('Notes on anonymous chat, online safety, and how the app '
+                'is built.'),
+        'ler_mais': 'Read more',
+        'voltar': 'Back to blog',
+        'publicado': 'Published on',
+        'cta_titulo': 'Curious to try it?',
+        'cta_sub': 'Nimo Chat is free, with no sign-up required.',
+    },
+    'pt': {
+        'nav': 'Blog',
+        'titulo_index': 'Blog — Nimo Chat',
+        'descricao_index': ('Guias e artigos sobre chat anônimo, segurança '
+                             'online e como o Nimo Chat funciona.'),
+        'h1': 'O blog do Nimo Chat',
+        'sub': ('Notas sobre chat anônimo, segurança online e como o app '
+                'é construído.'),
+        'ler_mais': 'Leia mais',
+        'voltar': 'Voltar para o blog',
+        'publicado': 'Publicado em',
+        'cta_titulo': 'Curioso para experimentar?',
+        'cta_sub': 'O Nimo Chat é grátis, sem precisar de cadastro.',
+    },
+}
+
+# Cada post: uma data e, por idioma, título/descrição/arquivo-fonte/imagem.
+# As imagens são screenshots reais do app (assets/blog/), e os arquivos-
+# fonte ficam em conteudo/blog/<idioma>/, junto dos documentos legais.
+BLOG_POSTS = [
+    {
+        'data': date(2026, 9, 8),
+        'en': {
+            'arquivo': 'blog-anonymous-chat-no-signup.html',
+            'titulo': 'Anonymous Chat With No Sign-Up: How Does It Work?',
+            'descricao': ('No email, no password, no phone number. How '
+                           'Nimo Chat matches you with strangers and what '
+                           '"safe" actually means with no account at all.'),
+            'fonte': 'blog/en/anonymous-chat-no-signup.md',
+            'imagem': 'assets/blog/privacidade-en.png',
+        },
+        'pt': {
+            'arquivo': 'blog-chat-anonimo-sem-cadastro.html',
+            'titulo': 'Chat anônimo sem cadastro: como funciona e é seguro usar?',
+            'descricao': ('Sem e-mail, sem senha, sem telefone guardado. '
+                           'Como o pareamento do Nimo Chat funciona e o '
+                           'que "seguro" quer dizer sem conta nenhuma.'),
+            'fonte': 'blog/pt/chat-anonimo-sem-cadastro.md',
+            'imagem': 'assets/blog/privacidade-pt.png',
+        },
+    },
+    {
+        'data': date(2026, 9, 8),
+        'en': {
+            'arquivo': 'blog-the-board-meet-new-people.html',
+            'titulo': "The Board: How to Meet New People Even When Nobody's Online",
+            'descricao': ('What happens when live matching finds no one? '
+                           'Inside the Board, the public 24-hour icebreaker '
+                           "space in Nimo Chat's Discover tab."),
+            'fonte': 'blog/en/the-board-meet-new-people.md',
+            'imagem': 'assets/blog/buscar-en.png',
+        },
+        'pt': {
+            'arquivo': 'blog-mural-conhecer-gente-nova.html',
+            'titulo': 'O Mural: como conhecer gente nova mesmo sem ninguém online',
+            'descricao': ('O que acontece quando o pareamento não encontra '
+                           'ninguém? Conheça o Mural, o espaço público de '
+                           '24h da aba Buscar do Nimo Chat.'),
+            'fonte': 'blog/pt/mural-conhecer-gente-nova.md',
+            'imagem': 'assets/blog/buscar-pt.png',
+        },
+    },
+    {
+        'data': date(2026, 9, 8),
+        'en': {
+            'arquivo': 'blog-safety-tips-anonymous-chat.html',
+            'titulo': '5 Safety Tips for Using Anonymous Chat Without the Headaches',
+            'descricao': ('Five practical habits for chatting with '
+                           'strangers safely, and how Nimo Chat was built '
+                           'around each one of them.'),
+            'fonte': 'blog/en/safety-tips-anonymous-chat.md',
+            'imagem': 'assets/blog/seguranca-en.png',
+        },
+        'pt': {
+            'arquivo': 'blog-dicas-seguranca-chat-anonimo.html',
+            'titulo': '5 dicas de segurança pra usar chat anônimo sem dor de cabeça',
+            'descricao': ('Cinco práticas para conversar com estranhos com '
+                           'mais segurança, e como o Nimo Chat foi '
+                           'construído em volta de cada uma delas.'),
+            'fonte': 'blog/pt/dicas-seguranca-chat-anonimo.md',
+            'imagem': 'assets/blog/seguranca-pt.png',
+        },
+    },
+    {
+        'data': date(2026, 9, 8),
+        'en': {
+            'arquivo': 'blog-private-feed-for-friends.html',
+            'titulo': 'The Private Feed: The Space That Exists Only Between You and Your Friends',
+            'descricao': ('Random matching is anonymous and public. The '
+                           'Feed is the opposite: private, friends-only, '
+                           'and invisible to everyone else.'),
+            'fonte': 'blog/en/private-feed-for-friends.md',
+            'imagem': 'assets/blog/feed-en.png',
+        },
+        'pt': {
+            'arquivo': 'blog-feed-privado-entre-amigos.html',
+            'titulo': 'O Feed privado: o espaço que só existe entre você e seus amigos',
+            'descricao': ('O pareamento aleatório é público e anônimo. O '
+                           'Feed é o oposto: privado, só entre amigos, e '
+                           'invisível para todo o resto.'),
+            'fonte': 'blog/pt/feed-privado-entre-amigos.md',
+            'imagem': 'assets/blog/feed-pt.png',
+        },
+    },
+]
+
+
+# ===========================================================================
 # Caminhos e URLs
 # ===========================================================================
 def pasta(cod):
@@ -241,6 +385,14 @@ def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld=''):
         for ancora, chave in [('como', 'como'), ('recursos', 'recursos'),
                               ('privacidade', 'privacidade'),
                               ('duvidas', 'duvidas')])
+    if cod in BLOG_IDIOMAS:
+        menu += (f'<a href="{link(cod, cod, "blog.html")}">'
+                 f'{BLOG_TEXTOS[cod]["nav"]}</a>')
+
+    rodape_blog_li = ''
+    if cod in BLOG_IDIOMAS:
+        rodape_blog_li = (f'<li><a href="{link(cod, cod, "blog.html")}">'
+                          f'{BLOG_TEXTOS[cod]["nav"]}</a></li>')
 
     return f"""<!DOCTYPE html>
 <html lang="{t['html_lang']}" dir="{t['dir']}">
@@ -305,7 +457,7 @@ def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld=''):
         <ul>
           <li><a href="{inicio}#como">{nav['como']}</a></li>
           <li><a href="{inicio}#recursos">{nav['recursos']}</a></li>
-          <li><a href="{inicio}#premium">{t['rodape_premium']}</a></li>
+          <li><a href="{inicio}#premium">{t['rodape_premium']}</a></li>{rodape_blog_li}
           <li><a href="{inicio}#baixar">{nav['baixar']}</a></li>
         </ul>
       </div>
@@ -620,6 +772,82 @@ def documento(cod, qual):
 
 
 # ===========================================================================
+# Blog
+# ===========================================================================
+def pagina_blog_index(cod):
+    t = IDIOMAS[cod]
+    bt = BLOG_TEXTOS[cod]
+
+    cartoes = []
+    for post in BLOG_POSTS:
+        p = post[cod]
+        cartoes.append(f"""
+<article class="post-cartao">
+  <a href="{link(cod, cod, p['arquivo'])}">
+    <img src="{subir(cod)}{p['imagem']}" alt="" width="1200" height="630"
+      loading="lazy">
+    <div class="post-cartao-corpo">
+      <span class="post-data">{data_extenso(cod, post['data'])}</span>
+      <h2>{p['titulo']}</h2>
+      <p>{p['descricao']}</p>
+      <span class="post-ler">{bt['ler_mais']}</span>
+    </div>
+  </a>
+</article>""")
+
+    corpo = f"""
+<main id="conteudo" class="doc">
+  <a class="voltar" href="{link(cod, cod)}">{I_SETA_ESQ} {t['voltar']}</a>
+  <div class="doc-cabeca">
+    <h1>{bt['h1']}</h1>
+    <p class="subtitulo">{bt['sub']}</p>
+  </div>
+  <div class="blog-grade">{''.join(cartoes)}</div>
+</main>
+"""
+    grupo = {c: 'blog.html' for c in BLOG_IDIOMAS}
+    return moldar(cod, 'blog.html', bt['titulo_index'], bt['descricao_index'],
+                  corpo, grupo)
+
+
+def pagina_blog_post(cod, post):
+    t = IDIOMAS[cod]
+    bt = BLOG_TEXTOS[cod]
+    p = post[cod]
+
+    origem = CONTEUDO / p['fonte']
+    texto = origem.read_text(encoding='utf-8')
+    corpo_md = re.sub(r'^# .*\n', '', texto, count=1)
+    html = markdown.markdown(corpo_md,
+                             extensions=['tables', 'sane_lists', 'attr_list'])
+
+    corpo = f"""
+<main id="conteudo" class="doc">
+  <a class="voltar" href="{link(cod, cod, 'blog.html')}">{I_SETA_ESQ}
+    {bt['voltar']}</a>
+  <div class="doc-cabeca">
+    <h1>{p['titulo']}</h1>
+    <p class="quando">{bt['publicado']}: {data_extenso(cod, post['data'])}</p>
+  </div>
+  <img class="post-capa" src="{subir(cod)}{p['imagem']}" alt=""
+    width="1200" height="630">
+  <div class="doc-corpo">
+{html}
+  </div>
+  <div class="post-cta">
+    <h3>{bt['cta_titulo']}</h3>
+    <p>{bt['cta_sub']}</p>
+    {lojas(t)}
+  </div>
+</main>
+"""
+    grupo = {c: post[c]['arquivo'] for c in BLOG_IDIOMAS}
+    descricao = p['descricao'][:158]
+    return moldar(cod, p['arquivo'], f"{p['titulo']} — {NOME}", descricao,
+                  corpo, grupo)
+
+
+# ===========================================================================
 # 404
 # ===========================================================================
 def pagina_erro():
@@ -699,6 +927,22 @@ def main():
             destino.write_text(documento(cod, qual), encoding='utf-8')
             contagem += 1
     print(f'  {len(COM_LEGAL) * 4} paginas legais')
+
+    grupos.append({c: 'blog.html' for c in BLOG_IDIOMAS})
+    for cod in BLOG_IDIOMAS:
+        destino = RAIZ / caminho(cod, 'blog.html')
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_text(pagina_blog_index(cod), encoding='utf-8')
+        contagem += 1
+    for post in BLOG_POSTS:
+        grupos.append({c: post[c]['arquivo'] for c in BLOG_IDIOMAS})
+        for cod in BLOG_IDIOMAS:
+            destino = RAIZ / caminho(cod, post[cod]['arquivo'])
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            destino.write_text(pagina_blog_post(cod, post), encoding='utf-8')
+            contagem += 1
+    print(f'  1 indice do blog + {len(BLOG_POSTS)} posts, em '
+          f'{len(BLOG_IDIOMAS)} idiomas')
 
     (RAIZ / '404.html').write_text(pagina_erro(), encoding='utf-8')
     (RAIZ / 'sitemap.xml').write_text(sitemap(grupos), encoding='utf-8')
