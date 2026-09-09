@@ -149,6 +149,7 @@ BLOG_POSTS = [
                            '"safe" actually means with no account at all.'),
             'fonte': 'blog/en/anonymous-chat-no-signup.md',
             'imagem': 'assets/blog/privacidade-en.png',
+            'alt': 'Nimo Chat profile screen showing no email, no password, and no personal data stored, with automatic location removal and one-tap account deletion.',
         },
         'pt': {
             'arquivo': 'blog-chat-anonimo-sem-cadastro.html',
@@ -158,6 +159,7 @@ BLOG_POSTS = [
                            'que "seguro" quer dizer sem conta nenhuma.'),
             'fonte': 'blog/pt/chat-anonimo-sem-cadastro.md',
             'imagem': 'assets/blog/privacidade-pt.png',
+            'alt': 'Tela de perfil do Nimo Chat mostrando sem e-mail, sem senha e nenhum dado pessoal guardado, com remoção automática de localização e exclusão da conta em um toque.',
         },
     },
     {
@@ -170,6 +172,7 @@ BLOG_POSTS = [
                            "space in Nimo Chat's Discover tab."),
             'fonte': 'blog/en/the-board-meet-new-people.md',
             'imagem': 'assets/blog/buscar-en.png',
+            'alt': "Nimo Chat's search screen showing live matching in progress, with the number of people currently in the queue to chat.",
         },
         'pt': {
             'arquivo': 'blog-mural-conhecer-gente-nova.html',
@@ -179,6 +182,7 @@ BLOG_POSTS = [
                            '24h da aba Buscar do Nimo Chat.'),
             'fonte': 'blog/pt/mural-conhecer-gente-nova.md',
             'imagem': 'assets/blog/buscar-pt.png',
+            'alt': 'Tela de busca do Nimo Chat mostrando o pareamento em andamento, com o número de pessoas na fila para conversar agora.',
         },
     },
     {
@@ -191,6 +195,7 @@ BLOG_POSTS = [
                            'around each one of them.'),
             'fonte': 'blog/en/safety-tips-anonymous-chat.md',
             'imagem': 'assets/blog/seguranca-en.png',
+            'alt': "Nimo Chat conversation screen showing a view-once photo, deleted from the server as soon as it's opened.",
         },
         'pt': {
             'arquivo': 'blog-dicas-seguranca-chat-anonimo.html',
@@ -200,6 +205,7 @@ BLOG_POSTS = [
                            'construído em volta de cada uma delas.'),
             'fonte': 'blog/pt/dicas-seguranca-chat-anonimo.md',
             'imagem': 'assets/blog/seguranca-pt.png',
+            'alt': 'Tela de conversa do Nimo Chat mostrando uma foto de visualização única, apagada do servidor assim que é aberta.',
         },
     },
     {
@@ -212,6 +218,7 @@ BLOG_POSTS = [
                            'and invisible to everyone else.'),
             'fonte': 'blog/en/private-feed-for-friends.md',
             'imagem': 'assets/blog/feed-en.png',
+            'alt': "Nimo Chat's private Feed screen, showing posts visible only to accepted friends.",
         },
         'pt': {
             'arquivo': 'blog-feed-privado-entre-amigos.html',
@@ -221,6 +228,7 @@ BLOG_POSTS = [
                            'invisível para todo o resto.'),
             'fonte': 'blog/pt/feed-privado-entre-amigos.md',
             'imagem': 'assets/blog/feed-pt.png',
+            'alt': 'Tela do Feed privado do Nimo Chat, mostrando publicações visíveis só para amigos aceitos.',
         },
     },
 ]
@@ -373,7 +381,8 @@ def seletor_idioma(cod, arquivo_por_idioma, t):
 </details>"""
 
 
-def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld=''):
+def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld='',
+           tipo_og='website', imagem_og=None):
     """Envolve o corpo no <head>, no cabeçalho e no rodapé."""
     t = IDIOMAS[cod]
     base = subir(cod)
@@ -407,12 +416,12 @@ def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld=''):
 {alternates(grupo)}
 <link rel="icon" type="image/png" href="{base}assets/icone.png">
 <link rel="apple-touch-icon" href="{base}assets/icone.png">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{tipo_og}">
 <meta property="og:site_name" content="{NOME}">
 <meta property="og:title" content="{titulo}">
 <meta property="og:description" content="{descricao}">
 <meta property="og:url" content="{url(cod, arquivo)}">
-<meta property="og:image" content="{SITE}/assets/capa.png">
+<meta property="og:image" content="{imagem_og or f'{SITE}/assets/capa.png'}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="{t['og_locale']}">
@@ -774,6 +783,37 @@ def documento(cod, qual):
 # ===========================================================================
 # Blog
 # ===========================================================================
+def jsonld_post(cod, post):
+    import json
+
+    p = post[cod]
+    quando = post['data'].isoformat()
+    grafo = [
+        {
+            '@type': 'BlogPosting',
+            '@id': f'{url(cod, p["arquivo"])}#post',
+            'headline': p['titulo'],
+            'description': p['descricao'],
+            'image': f'{SITE}/{p["imagem"]}',
+            'datePublished': quando,
+            'dateModified': quando,
+            'inLanguage': IDIOMAS[cod]['html_lang'],
+            'mainEntityOfPage': {'@type': 'WebPage',
+                                 '@id': url(cod, p['arquivo'])},
+            'author': {'@type': 'Organization', 'name': NOME,
+                       'url': f'{SITE}/'},
+            'publisher': {
+                '@type': 'Organization', 'name': NOME,
+                'logo': {'@type': 'ImageObject',
+                         'url': f'{SITE}/assets/icone.png'},
+            },
+        },
+    ]
+    corpo = json.dumps({'@context': 'https://schema.org', '@graph': grafo},
+                       ensure_ascii=False, indent=1)
+    return f'<script type="application/ld+json">\n{corpo}\n</script>'
+
+
 def pagina_blog_index(cod):
     t = IDIOMAS[cod]
     bt = BLOG_TEXTOS[cod]
@@ -784,8 +824,8 @@ def pagina_blog_index(cod):
         cartoes.append(f"""
 <article class="post-cartao">
   <a href="{link(cod, cod, p['arquivo'])}">
-    <img src="{subir(cod)}{p['imagem']}" alt="" width="1200" height="630"
-      loading="lazy">
+    <img src="{subir(cod)}{p['imagem']}" alt="{p['alt']}" width="1200"
+      height="630" loading="lazy">
     <div class="post-cartao-corpo">
       <span class="post-data">{data_extenso(cod, post['data'])}</span>
       <h2>{p['titulo']}</h2>
@@ -829,7 +869,7 @@ def pagina_blog_post(cod, post):
     <h1>{p['titulo']}</h1>
     <p class="quando">{bt['publicado']}: {data_extenso(cod, post['data'])}</p>
   </div>
-  <img class="post-capa" src="{subir(cod)}{p['imagem']}" alt=""
+  <img class="post-capa" src="{subir(cod)}{p['imagem']}" alt="{p['alt']}"
     width="1200" height="630">
   <div class="doc-corpo">
 {html}
@@ -844,7 +884,8 @@ def pagina_blog_post(cod, post):
     grupo = {c: post[c]['arquivo'] for c in BLOG_IDIOMAS}
     descricao = p['descricao'][:158]
     return moldar(cod, p['arquivo'], f"{p['titulo']} — {NOME}", descricao,
-                  corpo, grupo)
+                  corpo, grupo, jsonld=jsonld_post(cod, post),
+                  tipo_og='article', imagem_og=f'{SITE}/{p["imagem"]}')
 
 
 # ===========================================================================
