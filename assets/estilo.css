@@ -275,6 +275,28 @@ a.loja:hover {
   white-space: nowrap;
 }
 
+/* Selo oficial da Google Play (assets/badges/): a arte ja traz o fundo
+   escuro e o texto, entao aqui e so moldura e altura -- sem o
+   padding/icone/texto do .loja acima. */
+.loja-oficial {
+  display: inline-flex; align-items: center; height: 50px;
+  border-radius: 13px; overflow: hidden;
+  transition: transform .2s var(--curva), box-shadow .2s var(--curva);
+}
+.loja-oficial img { display: block; height: 100%; width: auto; }
+a.loja-oficial:hover {
+  transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0, 0, 0, .5);
+}
+.loja-oficial--breve { cursor: default; margin-top: 14px; position: relative; }
+.loja-oficial--breve img { opacity: .5; }
+.loja-oficial--breve .breve {
+  position: absolute; top: -13px; inset-inline-end: 12px;
+  font-style: normal; font-size: 10px; font-weight: 700;
+  letter-spacing: .04em; line-height: 1.5; padding: 1px 9px;
+  border-radius: 100px; background: var(--menta); color: #04150F;
+  white-space: nowrap;
+}
+
 /* ------------------------------------------------------ troca de idioma -- */
 .seletor { position: relative; margin-inline-start: 8px; }
 .seletor summary {

@@ -307,16 +307,29 @@ ICONES_RECURSO = [I_OLHO, I_MIC, I_CORACAO, I_RELOGIO, I_RAIO, I_ESCUDO]
 # vêm traduzidas para os onze idiomas:
 #   Google:  https://play.google.com/intl/en_us/badges/
 #   Apple:   https://developer.apple.com/app-store/marketing/guidelines/
-LOGO_PLAY = """<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
-<path fill="#00D2FF" d="M3.5 2.1 13.2 11.8 3.5 21.5c-.31-.25-.5-.64-.5-1.11V3.21c0-.47.19-.86.5-1.11z"/>
-<path fill="#00E27A" d="M3.5 2.1c.31-.25.76-.27 1.24-.01l11.55 6.59-3.09 3.12L3.5 2.1z"/>
-<path fill="#FFC400" d="m16.29 8.68 3.63 2.07c.91.52.91 1.58 0 2.1l-3.63 2.07-3.09-3.12 3.09-3.12z"/>
-<path fill="#FF3A44" d="M3.5 21.5 13.2 11.8l3.09 3.12L4.74 21.5c-.48.27-.93.25-1.24-.01z"/>
-</svg>"""
 
 LOGO_APPLE = """<svg viewBox="0 0 24 24" width="25" height="25" aria-hidden="true">
 <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 14.25 3.51 5.32 9.05 5.05c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.34zM12.03 4.99C11.88 2.71 13.73.83 15.85.7c.29 2.64-2.4 4.6-3.82 4.29z"/>
 </svg>"""
+
+
+# Idiomas com arte oficial da Google Play baixada em assets/badges/; os
+# demais caem no badge em ingles.
+BADGE_PLAY_IDIOMAS = {'en', 'pt', 'es', 'de', 'tr', 'ru', 'ar'}
+
+
+def selo_play(cod, href, breve, rotulo):
+    """Selo oficial da Google Play (assets/badges/). A propria arte ja traz
+    o fundo escuro e o texto -- so falta o link em volta."""
+    variante = cod if cod in BADGE_PLAY_IDIOMAS else 'en'
+    img = (f'<img src="{subir(cod)}assets/badges/google-play-{variante}.svg" '
+           f'alt="" width="169" height="50" loading="lazy">')
+    if href:
+        return (f'<a class="loja-oficial" href="{href}" aria-label="{rotulo}" '
+                f'rel="noopener">{img}</a>')
+    return (f'<span class="loja-oficial loja-oficial--breve" role="img" '
+            f'aria-label="{rotulo} — {breve}">{img}'
+            f'<i class="breve">{breve}</i></span>')
 
 
 def selo_loja(logo, linha1, linha2, href, breve, rotulo):
@@ -331,11 +344,10 @@ def selo_loja(logo, linha1, linha2, href, breve, rotulo):
             f'{rotulo} — {breve}">{miolo}<i class="breve">{breve}</i></span>')
 
 
-def lojas(t):
+def lojas(t, cod):
     return (
         '<div class="lojas">'
-        + selo_loja(LOGO_PLAY, 'GET IT ON', 'Google Play', LINK_PLAY,
-                    t['em_breve'], f'{NOME} — Google Play')
+        + selo_play(cod, LINK_PLAY, t['em_breve'], f'{NOME} — Google Play')
         + selo_loja(LOGO_APPLE, 'Download on the', 'App Store', LINK_APPLE,
                     t['em_breve'], f'{NOME} — App Store')
         + '</div>'
@@ -610,7 +622,7 @@ def pagina_inicial(cod):
       <h1 class="h-mega">{t['h1_a']}
         <em class="destaque">{t['h1_destaque']}</em></h1>
       <p class="subtitulo">{t['hero_sub']}</p>
-      {lojas(t)}
+      {lojas(t, cod)}
       <p class="ver-como"><a class="btn btn--fantasma" href="#como">
         {t['btn_como']}</a></p>
       <ul class="hero-notas">{notas}</ul>
@@ -718,7 +730,7 @@ def pagina_inicial(cod):
       <p class="olho">{t['olho_baixar']}</p>
       <h2 class="h-secao">{t['h_baixar']}</h2>
       <p class="subtitulo centro">{t['sub_baixar']}</p>
-      {lojas(t)}
+      {lojas(t, cod)}
       <p class="chamada-priv"><a class="btn btn--fantasma" href="{inicio_priv}">
         {I_ESCUDO_P} {t['btn_priv']}</a></p>
     </div>
@@ -877,7 +889,7 @@ def pagina_blog_post(cod, post):
   <div class="post-cta">
     <h3>{bt['cta_titulo']}</h3>
     <p>{bt['cta_sub']}</p>
-    {lojas(t)}
+    {lojas(t, cod)}
   </div>
 </main>
 """
