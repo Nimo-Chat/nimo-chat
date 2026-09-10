@@ -140,6 +140,35 @@ BLOG_TEXTOS = {
 # fonte ficam em conteudo/blog/<idioma>/, junto dos documentos legais.
 BLOG_POSTS = [
     {
+        'data': date(2026, 9, 10),
+        'en': {
+            'arquivo': 'blog-omegle-alternatives.html',
+            'titulo': 'Best Omegle Alternatives in 2026: What Actually Makes One Safe',
+            'descricao': ("Omegle shut down in 2023. Here's why, what to "
+                           'look for in a replacement, how the top '
+                           'alternatives compare, and how Nimo Chat handles '
+                           'the safety part.'),
+            'fonte': 'blog/en/omegle-alternatives.md',
+            'imagem': 'assets/blog/buscar-en.png',
+            'alt': ("Nimo Chat's search screen showing live matching in "
+                    'progress, with the number of people currently in the '
+                    'queue to chat.'),
+        },
+        'pt': {
+            'arquivo': 'blog-alternativas-omegle.html',
+            'titulo': ('Melhores alternativas ao Omegle em 2026: o que '
+                        'realmente torna uma delas segura'),
+            'descricao': ('O Omegle saiu do ar em 2023. Veja por que, o que '
+                           'procurar num substituto, como as alternativas '
+                           'se comparam, e como o Nimo cuida da segurança.'),
+            'fonte': 'blog/pt/alternativas-omegle.md',
+            'imagem': 'assets/blog/buscar-pt.png',
+            'alt': ('Tela de busca do Nimo Chat mostrando o pareamento em '
+                     'andamento, com o número de pessoas na fila para '
+                     'conversar agora.'),
+        },
+    },
+    {
         'data': date(2026, 9, 8),
         'en': {
             'arquivo': 'blog-anonymous-chat-no-signup.html',
