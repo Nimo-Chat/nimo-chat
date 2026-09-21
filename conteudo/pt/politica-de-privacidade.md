@@ -1,6 +1,6 @@
 # Política de Privacidade — Nimo Chat
 
-**Última atualização:** 13 de agosto de 2026
+**Última atualização:** 21 de setembro de 2026
 
 O Nimo Chat é operado por **Leonardo Mondaine**, pessoa física, estabelecido
 na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil ("nós").
@@ -35,8 +35,9 @@ Começamos por aqui porque é o que mais distingue este app:
   EXIF de toda foto antes de enviá-la**, o que apaga a coordenada de onde ela
   foi tirada. É um dado que quase todo aplicativo esquece de limpar.
 - **Não acessamos sua agenda de contatos.**
-- **Não usamos publicidade nem rastreadores de anúncio.** Não há SDK de
-  publicidade no aplicativo.
+- **Nunca vendemos seus dados a anunciantes.** Usamos o Google AdMob para
+  mostrar anúncio a quem não é premium — o que isso envolve está
+  detalhado na seção 12.
 
 ---
 
@@ -128,6 +129,7 @@ limita a fornecedores que executam o serviço por nós:
 | **Google Firebase** (Google LLC) | autenticação, banco de dados, arquivos, notificações e relatórios de falha | Estados Unidos e outros |
 | **Apple App Store / Google Play** | distribuição e, quando houver, pagamento de assinaturas | conforme cada loja |
 | **RevenueCat** | validar recibos de assinatura, quando as assinaturas estiverem ativas | Estados Unidos |
+| **Google AdMob** (Google LLC) | mostrar anúncio a quem não é premium | Estados Unidos e outros |
 | **Servidor TURN** | repassar áudio de chamadas quando a conexão direta falha | a definir — ainda não contratamos servidor TURN |
 
 Todos são obrigados contratualmente a usar os dados apenas para nos prestar o
@@ -259,8 +261,13 @@ prazos legais.
 
 ## 11. Conteúdo de outras pessoas
 
-O Nimo Chat conecta desconhecidos. Não lemos suas conversas nem as
-pré-analisamos. Você é responsável pelo que escreve e envia.
+O Nimo Chat conecta desconhecidos. Não lemos suas conversas: mensagens de
+texto não são revisadas por humanos, só passam por um filtro automático de
+palavras. Fotos enviadas passam por uma verificação automática adicional, sem
+revisão humana, que busca apenas sinais de nudez explícita ou violência
+gráfica em confiança máxima — quando identificado, o conteúdo é apagado
+automaticamente e a conta vai para revisão. Você é responsável pelo que
+escreve e envia.
 
 Existem ferramentas de denúncia e bloqueio em toda conversa. **Analisamos
 toda denúncia em até 24 horas** e removemos quem violar as regras. Casos
@@ -271,12 +278,31 @@ resultam em suspensão automática e imediata.
 
 ## 12. Publicidade
 
-Hoje o Nimo Chat **não exibe publicidade** e não possui nenhuma biblioteca de
-anúncios instalada. Isso é uma decisão de produto sobre o estado atual do
-aplicativo, não uma promessa permanente. Se um dia mudarmos, atualizaremos
-esta política e avisaremos antes.
+O plano gratuito do Nimo Chat mostra anúncio em tela cheia (intersticial)
+em dois momentos específicos: ao apertar "Buscar" e ao sair de uma
+conversa. Nunca aparece durante o chat em si. Quem assina o plano pago não
+vê nenhum anúncio.
 
-Seus dados **nunca** serão vendidos a anunciantes ou corretores de dados.
+Os anúncios são fornecidos pelo Google AdMob. Para isso, o AdMob pode
+coletar e processar, através do seu dispositivo: um identificador de
+publicidade (que você pode resetar ou limitar nas configurações do seu
+aparelho), endereço IP aproximado, informações técnicas do dispositivo e
+— apenas com o seu consentimento explícito, quando sua região exige
+(União Europeia, Reino Unido) — dados para personalizar o anúncio
+mostrado. Fora dessas regiões, seguimos o padrão do Google, que também
+pode pedir consentimento conforme a legislação local aplicável.
+
+Você pode gerenciar suas preferências de anúncio a qualquer momento nas
+configurações de privacidade do seu sistema (iOS: Ajustes > Privacidade >
+Rastreamento; Android: Configurações > Google > Anúncios).
+
+O tratamento desses dados pelo Google segue a [política de privacidade do
+Google](https://policies.google.com/privacy) e a [política de publicidade
+do AdMob](https://support.google.com/admob/answer/6128543).
+
+Seus dados **nunca** são vendidos a anunciantes ou corretores de dados — o
+AdMob os processa como prestador de serviço, sob a mesma base contratual
+da seção 4.
 
 ---
 

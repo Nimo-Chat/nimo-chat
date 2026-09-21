@@ -1,6 +1,6 @@
 # Terms of Use — Nimo Chat
 
-**Last updated:** August 13, 2026
+**Last updated:** September 21, 2026
 
 These terms are the contract between you and **Leonardo Mondaine**, an
 individual based at R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil,
@@ -69,7 +69,12 @@ behaves. The following is **prohibited**:
 ## 4. Your responsibility for what you send
 
 You are solely responsible for what you write, send and post. We don't read
-your conversations and we don't review them in advance.
+your conversations: text messages are not reviewed by a human, only checked
+by an automated keyword filter. Photos you send go through an additional
+automated check (no human review) that looks exclusively for
+maximum-confidence signals of explicit nudity or graphic violence; when
+detected, the content is automatically removed and the account is flagged
+for human review.
 
 By sending content, you declare that you have the right to do so and you grant
 us a limited license, solely to store and deliver that content within the app.
@@ -126,6 +131,12 @@ terms and may be a crime.
 ---
 
 ## 8. Subscriptions and payments
+
+The free plan shows a full-screen ad at two moments — when you tap
+"Search" and when you leave a conversation, never during the chat
+itself. Subscribing to the paid plan removes ads entirely. Details on
+what showing an ad involves are in the Privacy Policy, "Advertising"
+section.
 
 Where there are subscriptions, they will be processed exclusively by the App
 Store or Google Play. We don't receive or store your card details.

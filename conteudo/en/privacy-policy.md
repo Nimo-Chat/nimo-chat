@@ -1,6 +1,6 @@
 # Privacy Policy — Nimo Chat
 
-**Last updated:** August 13, 2026
+**Last updated:** September 21, 2026
 
 Nimo Chat is operated by **Leonardo Mondaine**, an individual, established at
 R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil ("we").
@@ -37,8 +37,8 @@ We start here because this is what sets this app apart the most:
   of where it was taken. It is a piece of data that almost every app forgets
   to clean up.
 - **We do not access your contact list.**
-- **We do not use advertising or ad trackers.** There is no advertising SDK in
-  the app.
+- **We never sell your data to advertisers.** We use Google AdMob to show
+  ads to non-premium users — see section 12 for what that involves.
 
 ---
 
@@ -127,6 +127,7 @@ run the service on our behalf:
 | **Google Firebase** (Google LLC) | authentication, database, files, notifications and crash reports | United States and others |
 | **Apple App Store / Google Play** | distribution and, where applicable, subscription payments | as per each store |
 | **RevenueCat** | validate subscription receipts, when subscriptions are active | United States |
+| **Google AdMob** (Google LLC) | showing ads to non-premium users | United States and others |
 | **TURN server** | relay call audio when the direct connection fails | to be defined — we have not contracted a TURN server yet |
 
 All of them are contractually required to use the data only to provide the
@@ -259,8 +260,13 @@ ANPD within the legal deadlines.
 
 ## 11. Other people's content
 
-Nimo Chat connects strangers. We do not read your conversations or pre-screen
-them. You are responsible for what you write and send.
+Nimo Chat connects strangers. We do not read your conversations: text
+messages are not reviewed by humans, only checked by an automated keyword
+filter. Photos you send go through an additional automated check, with no
+human review, that looks only for maximum-confidence signals of explicit
+nudity or graphic violence — when detected, the content is automatically
+removed and the account is sent for review. You are responsible for what you
+write and send.
 
 There are reporting and blocking tools in every chat. **We review every report
 within 24 hours** and remove anyone who breaks the rules. Serious cases —
@@ -271,12 +277,31 @@ immediate suspension.
 
 ## 12. Advertising
 
-Today Nimo Chat **does not display advertising** and has no ad library
-installed. This is a product decision about the app's current state, not a
-permanent promise. If we ever change that, we will update this policy and give
-notice beforehand.
+The free plan shows a full-screen (interstitial) ad at two specific
+moments: when you tap "Search" and when you leave a conversation. It
+never appears during the chat itself. Subscribers on the paid plan see no
+ads at all.
 
-Your data will **never** be sold to advertisers or data brokers.
+Ads are provided by Google AdMob. To do this, AdMob may collect and
+process, through your device: an advertising identifier (which you can
+reset or limit in your device settings), an approximate IP address,
+technical device information, and — only with your explicit consent,
+where your region requires it (European Union, United Kingdom) — data to
+personalize the ad shown. Outside those regions, we follow Google's
+standard, which may also request consent depending on applicable local
+law.
+
+You can manage your ad preferences at any time in your operating
+system's privacy settings (iOS: Settings > Privacy > Tracking; Android:
+Settings > Google > Ads).
+
+Google's handling of this data follows [Google's privacy
+policy](https://policies.google.com/privacy) and the [AdMob advertising
+policy](https://support.google.com/admob/answer/6128543).
+
+Your data is **never** sold to advertisers or data brokers — AdMob
+processes it as a service provider, under the same contractual basis as
+section 4.
 
 ---
 

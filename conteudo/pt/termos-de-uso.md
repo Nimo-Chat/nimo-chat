@@ -1,6 +1,6 @@
 # Termos de Uso — Nimo Chat
 
-**Última atualização:** 13 de agosto de 2026
+**Última atualização:** 21 de setembro de 2026
 
 Estes termos são o contrato entre você e **Leonardo Mondaine**, pessoa física
 estabelecida na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil,
@@ -71,7 +71,12 @@ mundo se comportar. É **proibido**:
 ## 4. Sua responsabilidade sobre o que envia
 
 Você é o único responsável pelo que escreve, envia e publica. Não lemos suas
-conversas nem as analisamos previamente.
+conversas: mensagens de texto não passam por revisão humana, só por um filtro
+automático de palavras. Fotos enviadas passam por uma verificação automática
+adicional (sem revisão humana) que busca exclusivamente sinais de nudez
+explícita ou violência gráfica em confiança máxima; quando identificado, o
+conteúdo é removido automaticamente e a conta é encaminhada para revisão
+humana.
 
 Ao enviar conteúdo, você declara que tem o direito de fazê-lo e nos concede
 uma licença limitada, apenas para armazenar e entregar esse conteúdo dentro do
@@ -128,6 +133,12 @@ termos e pode ser crime.
 ---
 
 ## 8. Assinaturas e pagamentos
+
+O plano gratuito mostra anúncio em tela cheia em dois momentos — ao
+apertar "Buscar" e ao sair de uma conversa, nunca durante o chat em si.
+Assinar o plano pago remove os anúncios por completo. Detalhes sobre os
+dados envolvidos em exibir anúncio estão na Política de Privacidade,
+seção "Publicidade".
 
 Quando houver assinaturas, elas serão processadas exclusivamente pela App
 Store ou pelo Google Play. Nós não recebemos nem armazenamos dados do seu
