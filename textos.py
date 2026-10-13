@@ -36,9 +36,7 @@ IDIOMAS['pt'] = {
     'dir': 'ltr',
 
     'titulo': 'Nimo Chat — chat anônimo e aleatório, sem cadastro',
-    'descricao': ('Chat anônimo e aleatório. Converse com estranhos sem '
-                  'cadastro, com foto que some depois de vista e chamada de '
-                  'voz. Grátis, sem anúncios.'),
+    'descricao': ('Chat anônimo e aleatório. Converse com estranhos sem cadastro, com foto que some depois de vista e chamada de voz. Grátis para usar.'),
     'palavras': ('chat anônimo, bate-papo anônimo, chat aleatório, conversar '
                  'com estranhos, conhecer pessoas, chat sem cadastro'),
 
@@ -58,7 +56,7 @@ IDIOMAS['pt'] = {
                  'em segundos, já está falando com uma pessoa que está online '
                  'agora.'),
     'btn_como': 'Ver como funciona',
-    'notas': ['Grátis para usar', 'Sem anúncios', '11 idiomas'],
+    'notas': ['Grátis para usar', 'Premium sem anúncios', '11 idiomas'],
     'em_breve': 'Em breve',
 
     'chat': {
@@ -134,10 +132,8 @@ IDIOMAS['pt'] = {
          'Você declara ter 18 anos ao aceitar os termos, e paramos por aí.'),
         ('Removemos os metadados EXIF de toda foto',
          'antes do envio — o que apaga a coordenada de onde ela foi tirada.'),
-        ('Nenhum SDK de publicidade, nenhum rastreador de anúncio.',
-         'O app não é pago com a sua atenção.'),
-        ('Um toque exclui a conta e todos os dados,',
-         'de verdade — e você pode pedir isso por aqui também.'),
+        ('Anúncios só no plano grátis.', 'Mostrados pelo Google AdMob, como explica a Política de Privacidade. No Premium não há anúncio nenhum, e nunca vendemos seus dados.'),
+        ('Excluir a conta leva um toque,', 'sem período de espera — e você pode pedir por aqui também. A página de exclusão mostra o que é apagado, o pouco que fica guardado, e por quê.'),
         ('Perdeu o celular?',
          'O código de recuperação traz a conta inteira de volta. Sem e-mail, '
          'sem SMS.'),
@@ -189,10 +185,7 @@ IDIOMAS['pt'] = {
          ['Ajustes → Excluir minha conta. Não há período de espera e não há '
           'como desfazer. A página de exclusão de conta explica exatamente o '
           'que é apagado, o que não é, e por quê.']),
-        ('Tem anúncio? Vocês vendem meus dados?',
-         ['Não e não. Não há nenhum SDK de publicidade no aplicativo, e nunca '
-          'vendemos nem alugamos dados de usuário. O Nimo se paga com as '
-          'assinaturas de quem quer o Premium.']),
+        ('Tem anúncio? Vocês vendem meus dados?', ['Tem anúncio no plano grátis: o Nimo mostra anúncios do Google AdMob para quem não é Premium. Para isso, o AdMob usa o identificador de publicidade do aparelho, como explica a Política de Privacidade — e você pode redefinir ou limitar esse identificador nas configurações do celular. Quem assina o Premium não vê anúncio nenhum.', 'Já os seus dados, nós nunca vendemos nem alugamos.']),
         ('Qual a idade mínima?',
          ['18 anos. Conta que aparenta ser de menor de idade é suspensa '
           'imediatamente quando denunciada, antes mesmo da revisão humana.']),
@@ -200,8 +193,7 @@ IDIOMAS['pt'] = {
 
     'olho_baixar': 'Baixar',
     'h_baixar': 'Uma conversa começa em segundos',
-    'sub_baixar': ('Grátis, sem anúncios e sem cadastro. Para Android e '
-                   'iPhone.'),
+    'sub_baixar': ('Grátis e sem cadastro. Disponível para Android. iPhone em breve.'),
 
     'rodape_sobre': ('Conversas anônimas com pessoas novas. Sem e-mail, sem '
                      'telefone, sem nome real.'),
@@ -243,9 +235,7 @@ IDIOMAS['en'] = {
     'dir': 'ltr',
 
     'titulo': 'Nimo Chat — anonymous random chat, no sign-up',
-    'descricao': ('Anonymous random chat with strangers. No sign-up, '
-                  'vanishing photos and voice calls. Free, no ads, no '
-                  'trackers.'),
+    'descricao': ('Anonymous random chat with strangers. No sign-up, vanishing photos and voice calls. Free to use.'),
     'palavras': ('anonymous chat, random chat, talk to strangers, chat with '
                  'strangers, meet new people, chat without registration'),
 
@@ -265,7 +255,7 @@ IDIOMAS['en'] = {
                  'seconds later, you are talking to someone who is online '
                  'right now.'),
     'btn_como': 'See how it works',
-    'notas': ['Free to use', 'No ads', '11 languages'],
+    'notas': ['Free to use', 'Ad-free with Premium', '11 languages'],
     'em_breve': 'Coming soon',
 
     'chat': {
@@ -342,10 +332,8 @@ IDIOMAS['en'] = {
         ('We strip EXIF metadata from every photo',
          'before upload — which erases the coordinates of where it was '
          'taken.'),
-        ('No advertising SDK, no ad trackers.',
-         'The app is not paid for with your attention.'),
-        ('One tap deletes your account and all your data,',
-         'for real — and you can request that here too.'),
+        ('Ads only on the free plan.', 'Served by Google AdMob, as the Privacy Policy explains. Premium has no ads at all, and we never sell your data.'),
+        ('Deleting your account takes one tap,', 'with no waiting period — and you can request it here too. The deletion page shows what is removed, the little that is kept, and why.'),
         ('Lost your phone?',
          'The recovery code brings the whole account back. No email, no '
          'SMS.'),
@@ -398,10 +386,7 @@ IDIOMAS['en'] = {
          ['Settings → Delete my account. There is no waiting period and no '
           'undo. The account deletion page explains exactly what is removed, '
           'what is not, and why.']),
-        ('Are there ads? Do you sell my data?',
-         ['No and no. There is no advertising SDK in the app, and we never '
-          'sell or rent user data. Nimo pays for itself with the '
-          'subscriptions of people who want Premium.']),
+        ('Are there ads? Do you sell my data?', ['There are ads on the free plan: Nimo shows Google AdMob ads to people who are not Premium. To do that, AdMob uses your device’s advertising ID, as the Privacy Policy explains — and you can reset or limit that ID in your phone settings. Premium subscribers see no ads at all.', 'Your data, on the other hand, we never sell or rent.']),
         ('What is the minimum age?',
          ['18. An account that appears to belong to a minor is suspended '
           'immediately when reported, before human review even starts.']),
@@ -409,7 +394,7 @@ IDIOMAS['en'] = {
 
     'olho_baixar': 'Get the app',
     'h_baixar': 'A conversation starts in seconds',
-    'sub_baixar': ('Free, no ads and no sign-up. For Android and iPhone.'),
+    'sub_baixar': ('Free and no sign-up. Available on Android. iPhone coming soon.'),
 
     'rodape_sobre': ('Anonymous conversations with new people. No email, no '
                      'phone number, no real name.'),

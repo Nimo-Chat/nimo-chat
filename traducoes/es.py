@@ -6,9 +6,7 @@ DADOS = {
     'dir': 'ltr',
 
     'titulo': 'Nimo Chat — chat anónimo y aleatorio, sin registro',
-    'descricao': ('Chat anónimo y aleatorio. Habla con desconocidos sin '
-                  'registro, con fotos que desaparecen y llamadas de voz. '
-                  'Gratis, sin anuncios.'),
+    'descricao': ('Chat anónimo y aleatorio. Habla con desconocidos sin registro, con fotos que desaparecen y llamadas de voz. Gratis.'),
     'palavras': ('chat anónimo, chat aleatorio, hablar con desconocidos, '
                  'conocer gente, chat sin registro, chat con desconocidos'),
 
@@ -28,7 +26,7 @@ DADOS = {
                  'segundos después, ya estás hablando con alguien que está '
                  'en línea ahora mismo.'),
     'btn_como': 'Ver cómo funciona',
-    'notas': ['Gratis', 'Sin anuncios', '11 idiomas'],
+    'notas': ['Gratis', 'Premium sin anuncios', '11 idiomas'],
     'em_breve': 'Muy pronto',
 
     'chat': {
@@ -107,10 +105,8 @@ DADOS = {
         ('Borramos los metadatos EXIF de todas las fotos',
          'antes de subirlas, lo que elimina las coordenadas del lugar donde se '
          'tomaron.'),
-        ('Ningún SDK de publicidad, ningún rastreador.',
-         'La app no se paga con tu atención.'),
-        ('Un toque borra tu cuenta y todos tus datos,',
-         'de verdad — y también puedes pedirlo desde aquí.'),
+        ('Anuncios solo en el plan gratis.', 'Los muestra Google AdMob, como explica la Política de Privacidad. Premium no tiene ningún anuncio, y nunca vendemos tus datos.'),
+        ('Eliminar la cuenta lleva un toque,', 'sin período de espera — y también puedes pedirlo aquí. La página de eliminación muestra qué se borra, lo poco que se conserva y por qué.'),
         ('¿Perdiste el móvil?',
          'El código de recuperación devuelve la cuenta entera. Sin correo, sin '
          'SMS.'),
@@ -162,10 +158,7 @@ DADOS = {
          ['Ajustes → Borrar mi cuenta. No hay periodo de espera ni marcha '
           'atrás. La página de eliminación de cuenta explica exactamente qué '
           'se borra, qué no y por qué.']),
-        ('¿Hay anuncios? ¿Vendéis mis datos?',
-         ['No y no. No hay ningún SDK de publicidad en la app, y nunca '
-          'vendemos ni alquilamos datos de usuarios. Nimo se paga con las '
-          'suscripciones de quien quiere Premium.']),
+        ('¿Hay anuncios? ¿Venden mis datos?', ['Hay anuncios en el plan gratis: Nimo muestra anuncios de Google AdMob a quien no es Premium. Para eso, AdMob usa el identificador de publicidad del dispositivo, como explica la Política de Privacidad, y puedes restablecerlo o limitarlo en los ajustes del teléfono. Quien tiene Premium no ve ningún anuncio.', 'Tus datos, en cambio, nunca los vendemos ni los alquilamos.']),
         ('¿Cuál es la edad mínima?',
          ['18 años. Una cuenta que aparente ser de un menor queda suspendida '
           'de inmediato al ser denunciada, antes incluso de la revisión '
@@ -174,8 +167,7 @@ DADOS = {
 
     'olho_baixar': 'Descargar',
     'h_baixar': 'Una conversación empieza en segundos',
-    'sub_baixar': ('Gratis, sin anuncios y sin registro. Para Android y '
-                   'iPhone.'),
+    'sub_baixar': ('Gratis y sin registro. Disponible para Android. iPhone muy pronto.'),
 
     'rodape_sobre': ('Conversaciones anónimas con gente nueva. Sin correo, sin '
                      'teléfono, sin nombre real.'),

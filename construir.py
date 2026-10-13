@@ -563,7 +563,7 @@ def jsonld_home(cod, t):
             'name': NOME,
             'description': t['descricao'],
             'applicationCategory': 'SocialNetworkingApplication',
-            'operatingSystem': 'Android, iOS',
+            'operatingSystem': 'Android',
             'inLanguage': [IDIOMAS[c]['html_lang'] for c in ORDEM],
             'contentRating': '18+',
             'offers': {'@type': 'Offer', 'price': '0',

@@ -6,9 +6,7 @@ DADOS = {
     'dir': 'ltr',
 
     'titulo': 'Nimo Chat — anonim sohbet ve rastgele sohbet, üyeliksiz',
-    'descricao': ('Anonim sohbet uygulaması. Kayıt olmadan yabancılarla '
-                  'sohbet et: görülünce kaybolan fotoğraflar ve sesli arama. '
-                  'Ücretsiz, reklamsız.'),
+    'descricao': ('Yabancılarla anonim ve rastgele sohbet. Kayıt yok; kaybolan fotoğraflar ve sesli arama. Kullanımı ücretsiz.'),
     'palavras': ('anonim sohbet, rastgele sohbet, yabancılarla sohbet, yeni '
                  'insanlarla tanışma, kayıt olmadan sohbet, sohbet '
                  'uygulaması'),
@@ -29,7 +27,7 @@ DADOS = {
                  'saniyeler sonra şu anda çevrimiçi olan biriyle '
                  'konuşuyorsun.'),
     'btn_como': 'Nasıl çalıştığını gör',
-    'notas': ['Ücretsiz', 'Reklamsız', '11 dil'],
+    'notas': ['Ücretsiz', 'Premium’da reklam yok', '11 dil'],
     'em_breve': 'Çok yakında',
 
     'chat': {
@@ -104,10 +102,8 @@ DADOS = {
         ('Her fotoğrafın EXIF verilerini siliyoruz',
          'yüklenmeden önce — bu da fotoğrafın çekildiği yerin koordinatlarını '
          'ortadan kaldırıyor.'),
-        ('Reklam SDK’sı yok, reklam takipçisi yok.',
-         'Uygulamanın bedeli senin dikkatin değil.'),
-        ('Tek dokunuş hesabını ve tüm verilerini siler,',
-         'gerçekten — bunu buradan da talep edebilirsin.'),
+        ('Reklam yalnızca ücretsiz planda.', 'Reklamları, Gizlilik Politikası’nda açıklandığı gibi Google AdMob gösterir. Premium’da hiç reklam yoktur ve verilerini asla satmayız.'),
+        ('Hesabını tek dokunuşla silebilirsin,', 'bekleme süresi yok — buradan da talep edebilirsin. Silme sayfası neyin silindiğini, saklanan az şeyi ve nedenini gösterir.'),
         ('Telefonunu mu kaybettin?',
          'Kurtarma kodu hesabın tamamını geri getirir. E-posta yok, SMS '
          'yok.'),
@@ -158,10 +154,7 @@ DADOS = {
          ['Ayarlar → Hesabımı sil. Bekleme süresi yok, geri dönüşü de yok. '
           'Hesap silme sayfası neyin silindiğini, neyin silinmediğini ve '
           'nedenini tam olarak anlatıyor.']),
-        ('Reklam var mı? Verilerimi satıyor musunuz?',
-         ['Hayır ve hayır. Uygulamada hiçbir reklam SDK’sı yok ve kullanıcı '
-          'verilerini asla satmıyor ya da kiralamıyoruz. Nimo, Premium '
-          'isteyenlerin abonelikleriyle kendini finanse ediyor.']),
+        ('Reklam var mı? Verilerimi satıyor musunuz?', ['Ücretsiz planda reklam var: Nimo, Premium olmayanlara Google AdMob reklamları gösterir. Bunun için AdMob, Gizlilik Politikası’nda açıklandığı gibi cihazının reklam kimliğini kullanır; bu kimliği telefon ayarlarından sıfırlayabilir veya sınırlayabilirsin. Premium aboneler hiç reklam görmez.', 'Verilerini ise asla satmayız ya da kiralamayız.']),
         ('Yaş sınırı nedir?',
          ['18. Reşit olmayan birine ait göründüğü şikâyet edilen bir hesap, '
           'daha insan incelemesi başlamadan anında askıya alınıyor.']),
@@ -169,8 +162,7 @@ DADOS = {
 
     'olho_baixar': 'Uygulamayı indir',
     'h_baixar': 'Bir sohbet saniyeler içinde başlar',
-    'sub_baixar': ('Ücretsiz, reklamsız ve kayıt gerektirmiyor. Android ve '
-                   'iPhone için.'),
+    'sub_baixar': ('Ücretsiz ve kayıtsız. Android’de mevcut. iPhone çok yakında.'),
 
     'rodape_sobre': ('Yeni insanlarla anonim sohbetler. E-posta yok, telefon '
                      'numarası yok, gerçek ad yok.'),

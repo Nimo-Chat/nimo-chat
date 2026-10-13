@@ -159,6 +159,7 @@ Commission. Data always travels encrypted.
 |---|---|
 | Profile and chats | for as long as the account exists |
 | View-once photo/video | until opened, or 24 hours |
+| Photos, videos and voice messages in chats | 30 days, or sooner if both people delete the chat |
 | Status | 24 hours |
 | Wall message | 24 hours |
 | Matching queue | minutes |

@@ -161,6 +161,7 @@ Comissão Europeia. Os dados trafegam sempre criptografados.
 |---|---|
 | Perfil e conversas | enquanto a conta existir |
 | Foto/vídeo de visualização única | até ser aberta, ou 24 horas |
+| Fotos, vídeos e áudios das conversas | 30 dias, ou antes, se as duas pessoas apagarem a conversa |
 | Status | 24 horas |
 | Recado no mural | 24 horas |
 | Fila de pareamento | minutos |

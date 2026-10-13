@@ -6,9 +6,7 @@ DADOS = {
     'dir': 'ltr',
 
     'titulo': 'Nimo Chat — anonymer Chat & Zufallschat ohne Anmeldung',
-    'descricao': ('Anonymer Chat ohne Anmeldung: mit Fremden chatten, Fotos, '
-                  'die nach dem Ansehen verschwinden, und Sprachanrufe. '
-                  'Kostenlos, ohne Werbung und ohne Tracker.'),
+    'descricao': ('Anonymer Zufallschat mit Fremden. Ohne Anmeldung, mit verschwindenden Fotos und Sprachanrufen. Kostenlos nutzbar.'),
     'palavras': ('anonymer Chat, Zufallschat, mit Fremden chatten, Leute '
                  'kennenlernen, Chat ohne Anmeldung, anonym chatten'),
 
@@ -28,7 +26,7 @@ DADOS = {
                  'wählst einen Spitznamen und redest Sekunden später mit '
                  'jemandem, der gerade online ist.'),
     'btn_como': 'Ansehen, wie es funktioniert',
-    'notas': ['Kostenlos', 'Keine Werbung', '11 Sprachen'],
+    'notas': ['Kostenlos', 'Premium ohne Werbung', '11 Sprachen'],
     'em_breve': 'Demnächst',
 
     'chat': {
@@ -110,10 +108,8 @@ DADOS = {
         ('Wir entfernen die EXIF-Metadaten aus jedem Foto,',
          'bevor es hochgeladen wird — damit sind auch die Koordinaten des '
          'Aufnahmeorts weg.'),
-        ('Kein Werbe-SDK, keine Ad-Tracker.',
-         'Diese App wird nicht mit deiner Aufmerksamkeit bezahlt.'),
-        ('Ein Tipp löscht dein Konto und alle deine Daten,',
-         'und zwar wirklich — anfordern kannst du das auch hier.'),
+        ('Werbung nur im kostenlosen Tarif.', 'Ausgeliefert über Google AdMob, wie die Datenschutzerklärung erklärt. Premium ist komplett werbefrei, und wir verkaufen deine Daten nie.'),
+        ('Dein Konto löschst du mit einem Tippen,', 'ohne Wartezeit — und du kannst es auch hier beantragen. Die Löschseite zeigt, was entfernt wird, das Wenige, das bleibt, und warum.'),
         ('Handy verloren?',
          'Der Wiederherstellungscode holt das ganze Konto zurück. Ohne '
          'E-Mail, ohne SMS.'),
@@ -169,10 +165,7 @@ DADOS = {
          ['Einstellungen → Mein Konto löschen. Es gibt keine Wartefrist und '
           'kein Zurück. Die Seite zur Kontolöschung erklärt genau, was '
           'gelöscht wird, was nicht und warum.']),
-        ('Gibt es Werbung? Verkauft ihr meine Daten?',
-         ['Nein und nein. In der App steckt kein einziges Werbe-SDK, und wir '
-          'verkaufen oder vermieten niemals Nutzerdaten. Nimo finanziert sich '
-          'über die Abos derer, die Premium wollen.']),
+        ('Gibt es Werbung? Verkauft ihr meine Daten?', ['Im kostenlosen Tarif gibt es Werbung: Nimo zeigt Anzeigen von Google AdMob für alle ohne Premium. Dafür nutzt AdMob die Werbe-ID deines Geräts, wie die Datenschutzerklärung erklärt — du kannst sie in den Einstellungen deines Handys zurücksetzen oder einschränken. Mit Premium siehst du keine Werbung.', 'Deine Daten verkaufen oder vermieten wir dagegen nie.']),
         ('Ab welchem Alter?',
          ['Ab 18. Ein Konto, das nach einer minderjährigen Person aussieht, '
           'wird nach einer Meldung sofort gesperrt — noch bevor ein Mensch es '
@@ -181,8 +174,7 @@ DADOS = {
 
     'olho_baixar': 'App holen',
     'h_baixar': 'Ein Gespräch beginnt in Sekunden',
-    'sub_baixar': ('Kostenlos, ohne Werbung und ohne Anmeldung. Für Android '
-                   'und iPhone.'),
+    'sub_baixar': ('Kostenlos und ohne Anmeldung. Für Android verfügbar. iPhone folgt bald.'),
 
     'rodape_sobre': ('Anonyme Gespräche mit neuen Leuten. Keine E-Mail, keine '
                      'Telefonnummer, kein echter Name.'),
