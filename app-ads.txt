@@ -1,4 +1,5 @@
 google.com, pub-9381789814620993, DIRECT, f08c47fec0942fa0
+facebook.com, 2245364726251373, DIRECT, c3e20eee3f780d68
 facebook.com, 2175717089881779, DIRECT, c3e20eee3f780d68
 unity.com, 40039742, DIRECT, 96cabb5fbdde37a7
 vungle.com,6a688d963c7069885f293edd,DIRECT,c107d686becd2d77
