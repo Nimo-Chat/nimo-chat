@@ -136,9 +136,121 @@ BLOG_TEXTOS = {
 }
 
 # Cada post: uma data e, por idioma, título/descrição/arquivo-fonte/imagem.
-# As imagens são screenshots reais do app (assets/blog/), e os arquivos-
+# As imagens são screenshots reais do app ou ilustrações de IA (assets/blog/), e os arquivos-
 # fonte ficam em conteudo/blog/<idioma>/, junto dos documentos legais.
 BLOG_POSTS = [
+    # --- Out/2026: 4 matérias novas com ilustrações geradas por IA
+    # (Gemini), mesma imagem para en e pt (sem texto dentro da imagem).
+    {
+        'data': date(2026, 10, 21),
+        'en': {
+            'arquivo': 'blog-icebreaker-questions-for-strangers.html',
+            'titulo': "45 Icebreaker Questions for Talking to Strangers (That Aren't Boring)",
+            'descricao': ('Skip the dead-end "hey, how are you?". 45 '
+                           'questions for every stage of a chat with a '
+                           'stranger, plus what to avoid in the first '
+                           'messages.'),
+            'fonte': 'blog/en/icebreaker-questions-for-strangers.md',
+            'imagem': 'assets/blog/ia-perguntas.jpg',
+            'alt': ('Illustration of two young adults in different cities '
+                    'at night, smiling at their phones, connected by a '
+                    'trail of chat bubbles with question marks.'),
+        },
+        'pt': {
+            'arquivo': 'blog-perguntas-para-puxar-assunto.html',
+            'titulo': '45 perguntas para puxar assunto com um estranho (sem ser chato)',
+            'descricao': ('Chega de "oi, tudo bem?" que morre na segunda '
+                           'mensagem. 45 perguntas para cada momento da '
+                           'conversa e o que evitar no começo.'),
+            'fonte': 'blog/pt/perguntas-para-puxar-assunto.md',
+            'imagem': 'assets/blog/ia-perguntas.jpg',
+            'alt': ('Ilustração de duas pessoas em cidades diferentes, à '
+                    'noite, sorrindo para o celular, ligadas por balões '
+                    'de conversa com pontos de interrogação.'),
+        },
+    },
+    {
+        'data': date(2026, 10, 21),
+        'en': {
+            'arquivo': 'blog-make-friends-online-when-shy.html',
+            'titulo': "How to Make Friends Online When You're Shy: A No-Pressure Guide",
+            'descricao': ('Why texting favors quieter people, seven '
+                           'practical steps to make friends without forcing '
+                           'it, and the safety habits that matter most.'),
+            'fonte': 'blog/en/make-friends-online-when-shy.md',
+            'imagem': 'assets/blog/ia-timido.jpg',
+            'alt': ('Illustration of a young woman with headphones sitting '
+                    'on her bedroom floor at night, smiling at her phone '
+                    'as small chat bubbles float up like fireflies.'),
+        },
+        'pt': {
+            'arquivo': 'blog-como-fazer-amigos-online-timido.html',
+            'titulo': 'Como fazer amigos pela internet sendo tímido: um guia sem pressão',
+            'descricao': ('Por que conversar por texto favorece quem é '
+                           'mais reservado, 7 passos para fazer amigos sem '
+                           'forçar a barra e os cuidados que importam.'),
+            'fonte': 'blog/pt/como-fazer-amigos-online-timido.md',
+            'imagem': 'assets/blog/ia-timido.jpg',
+            'alt': ('Ilustração de uma jovem com fones de ouvido sentada no '
+                    'chão do quarto à noite, sorrindo para o celular, com '
+                    'balões de conversa flutuando como vaga-lumes.'),
+        },
+    },
+    {
+        'data': date(2026, 10, 21),
+        'en': {
+            'arquivo': 'blog-from-stranger-to-friend.html',
+            'titulo': 'From Stranger to Friend: How to Turn an Anonymous Chat Into a Real Friendship',
+            'descricao': ('The signs a chat could become a friendship, how '
+                           'to take the next step without pressure, and how '
+                           'friends work on Nimo Chat.'),
+            'fonte': 'blog/en/from-stranger-to-friend.md',
+            'imagem': 'assets/blog/ia-amizade.jpg',
+            'alt': ('Illustration of anonymous chat bubbles that glow and '
+                    'merge into two friends laughing together on a rooftop '
+                    'at night, sharing earphones.'),
+        },
+        'pt': {
+            'arquivo': 'blog-de-estranho-a-amigo.html',
+            'titulo': 'De estranho a amigo: como transformar um chat anônimo em amizade de verdade',
+            'descricao': ('Os sinais de que uma conversa pode virar '
+                           'amizade, como dar o próximo passo sem pressão e '
+                           'como funcionam os amigos no Nimo Chat.'),
+            'fonte': 'blog/pt/de-estranho-a-amigo.md',
+            'imagem': 'assets/blog/ia-amizade.jpg',
+            'alt': ('Ilustração de balões de conversa anônimos que brilham '
+                    'e se juntam, virando dois amigos rindo juntos num '
+                    'terraço à noite, dividindo fones de ouvido.'),
+        },
+    },
+    {
+        'data': date(2026, 10, 21),
+        'en': {
+            'arquivo': 'blog-why-its-easier-to-open-up-to-a-stranger.html',
+            'titulo': "Why It's Easier to Open Up to a Stranger (and How to Do It Safely)",
+            'descricao': ('The "stranger on a train" effect explained, what '
+                           'research says about talking to strangers, and '
+                           'how to vent anonymously without exposing '
+                           'yourself.'),
+            'fonte': 'blog/en/why-its-easier-to-open-up-to-a-stranger.md',
+            'imagem': 'assets/blog/ia-desabafar.jpg',
+            'alt': ('Illustration of a man on a night train by a rainy '
+                    'window, typing on his phone, with a glowing chat '
+                    'bubble showing a faceless avatar listening.'),
+        },
+        'pt': {
+            'arquivo': 'blog-desabafar-com-desconhecido.html',
+            'titulo': 'Por que é mais fácil desabafar com um desconhecido (e como fazer isso com segurança)',
+            'descricao': ('O efeito "estranho no trem", o que a pesquisa '
+                           'diz sobre conversar com desconhecidos e como '
+                           'desabafar no anonimato sem se expor.'),
+            'fonte': 'blog/pt/desabafar-com-desconhecido.md',
+            'imagem': 'assets/blog/ia-desabafar.jpg',
+            'alt': ('Ilustração de um homem num trem à noite, ao lado da '
+                    'janela com chuva, digitando no celular, com um balão '
+                    'de conversa mostrando um avatar anônimo ouvindo.'),
+        },
+    },
     {
         'data': date(2026, 9, 10),
         'en': {

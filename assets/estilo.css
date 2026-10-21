@@ -754,6 +754,12 @@ a.loja-oficial:hover {
   border-radius: var(--raio-g); border: 1px solid var(--borda); margin: 0 0 44px;
 }
 
+/* Capas ilustradas (assets/blog/ia-*.jpg, já em 1200x630): altura automática
+   para não cortar. O atributo height="630" do <img> fixava 630px e o
+   object-fit cortava a ilustração no celular. As capas antigas (prints do
+   app, verticais) continuam como estavam. */
+.post-capa[src*="/ia-"], .post-cartao img[src*="/ia-"] { height: auto; }
+
 .post-cta {
   margin-top: 54px; padding: 34px 30px; text-align: center;
   border: 1px solid rgba(46, 230, 168, .30); border-radius: var(--raio-g);
