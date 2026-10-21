@@ -1,6 +1,6 @@
 # Política de Privacidade — Nimo Chat
 
-**Última atualização:** 21 de setembro de 2026
+**Última atualização:** 20 de outubro de 2026
 
 O Nimo Chat é operado por **Leonardo Mondaine**, pessoa física, estabelecido
 na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil ("nós").
@@ -46,8 +46,25 @@ Começamos por aqui porque é o que mais distingue este app:
 ### 2.1 Identificação da conta
 Ao abrir o app pela primeira vez, criamos uma **conta anônima** com um
 identificador aleatório gerado pelo Firebase Authentication. Esse
-identificador não está ligado a você, ao seu aparelho ou a qualquer serviço
-externo.
+identificador não está ligado a você nem a qualquer serviço externo.
+
+### 2.1.1 Identificador do aparelho (prevenção de abuso)
+Para que quem foi banido por abuso grave — principalmente qualquer coisa
+envolvendo menores de idade — não volte simplesmente reinstalando o app, o
+aplicativo nos envia, a cada abertura, um **identificador do aparelho**: no
+Android, o identificador próprio do app fornecido pelo sistema (ANDROID_ID); no
+iPhone, um código aleatório que o app guarda no chaveiro (Keychain) do
+aparelho. **Nunca guardamos esse valor**: o servidor guarda só um resumo
+criptográfico (hash) irreversível dele, ligado às contas usadas naquele
+aparelho. Ele é usado **somente** para segurança e prevenção de fraude e abuso
+— nunca para publicidade, rastreamento ou criação de perfil — e não é
+compartilhado com ninguém. Se uma conta for banida por abuso grave, contas
+novas criadas no mesmo aparelho são bloqueadas; as outras contas que já
+existiam no aparelho passam por revisão de uma pessoa, sem banimento
+automático. Base legal: legítimo interesse e proteção de crianças e
+adolescentes (LGPD art. 7º, IX, e art. 14). O hash é apagado junto com a sua
+conta, exceto quando a lei nos obriga a guardar o registro de um banimento para
+a proteção de menores.
 
 ### 2.2 Dados de perfil, informados por você
 | Dado | Obrigatório | Quem vê |

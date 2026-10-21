@@ -65,7 +65,7 @@
   <a class="voltar" href="../pt/index.html"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg> Voltar para o início</a>
   <div class="doc-cabeca">
     <h1>Política de Privacidade</h1>
-    <p class="quando">Última atualização: 21 de setembro de 2026</p>
+    <p class="quando">Última atualização: 20 de outubro de 2026</p>
   </div>
   <div class="aviso"><p>Este documento está disponível em português e em inglês. A versão em inglês é a de referência para quem usa o app fora do Brasil.</p></div>
   <div class="doc-corpo">
@@ -106,8 +106,24 @@ Consumidor, e não abrimos mão dele.</p>
 <h3>2.1 Identificação da conta</h3>
 <p>Ao abrir o app pela primeira vez, criamos uma <strong>conta anônima</strong> com um
 identificador aleatório gerado pelo Firebase Authentication. Esse
-identificador não está ligado a você, ao seu aparelho ou a qualquer serviço
-externo.</p>
+identificador não está ligado a você nem a qualquer serviço externo.</p>
+<h3>2.1.1 Identificador do aparelho (prevenção de abuso)</h3>
+<p>Para que quem foi banido por abuso grave — principalmente qualquer coisa
+envolvendo menores de idade — não volte simplesmente reinstalando o app, o
+aplicativo nos envia, a cada abertura, um <strong>identificador do aparelho</strong>: no
+Android, o identificador próprio do app fornecido pelo sistema (ANDROID_ID); no
+iPhone, um código aleatório que o app guarda no chaveiro (Keychain) do
+aparelho. <strong>Nunca guardamos esse valor</strong>: o servidor guarda só um resumo
+criptográfico (hash) irreversível dele, ligado às contas usadas naquele
+aparelho. Ele é usado <strong>somente</strong> para segurança e prevenção de fraude e abuso
+— nunca para publicidade, rastreamento ou criação de perfil — e não é
+compartilhado com ninguém. Se uma conta for banida por abuso grave, contas
+novas criadas no mesmo aparelho são bloqueadas; as outras contas que já
+existiam no aparelho passam por revisão de uma pessoa, sem banimento
+automático. Base legal: legítimo interesse e proteção de crianças e
+adolescentes (LGPD art. 7º, IX, e art. 14). O hash é apagado junto com a sua
+conta, exceto quando a lei nos obriga a guardar o registro de um banimento para
+a proteção de menores.</p>
 <h3>2.2 Dados de perfil, informados por você</h3>
 <div class="rolavel"><table>
 <thead>
