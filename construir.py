@@ -64,22 +64,51 @@ ARQ_LEGAL = {
     'en': {'privacidade': 'privacy.html',
            'termos': 'terms.html',
            'excluir': 'delete-account.html',
-           'seguranca': 'child-safety.html'},
+           'seguranca': 'child-safety.html',
+           'privacidade_iphone': 'privacy-iphone.html',
+           'termos_iphone': 'terms-iphone.html'},
     'pt': {'privacidade': 'privacidade.html',
            'termos': 'termos.html',
            'excluir': 'excluir-conta.html',
-           'seguranca': 'seguranca-infantil.html'},
+           'seguranca': 'seguranca-infantil.html',
+           'privacidade_iphone': 'privacidade-iphone.html',
+           'termos_iphone': 'termos-iphone.html'},
 }
 FONTE_LEGAL = {
     'en': {'privacidade': 'en/privacy-policy.md',
            'termos': 'en/terms-of-use.md',
            'excluir': 'en/delete-account.md',
-           'seguranca': 'en/child-safety-standards.md'},
+           'seguranca': 'en/child-safety-standards.md',
+           'privacidade_iphone': 'en/privacy-policy-iphone.md',
+           'termos_iphone': 'en/terms-of-use-iphone.md'},
     'pt': {'privacidade': 'pt/politica-de-privacidade.md',
            'termos': 'pt/termos-de-uso.md',
            'excluir': 'pt/excluir-conta.md',
-           'seguranca': 'pt/padroes-de-seguranca-infantil.md'},
+           'seguranca': 'pt/padroes-de-seguranca-infantil.md',
+           'privacidade_iphone': 'pt/politica-de-privacidade-iphone.md',
+           'termos_iphone': 'pt/termos-de-uso-iphone.md'},
 }
+
+# Versão do app para iPhone (out/2026): lá o Nimo é "fazer amigos" — sem
+# chat aleatório nem anonimato (Apple, diretriz 1.2). Os documentos têm
+# página própria, e é o link delas que vai no App Store Connect. Títulos
+# aqui, e não no textos.py, porque só existem em en e pt.
+TITULOS_IPHONE = {
+    'en': {'privacidade_iphone': 'Privacy Policy — iPhone app',
+           'termos_iphone': 'Terms of Use — iPhone app'},
+    'pt': {'privacidade_iphone': 'Política de Privacidade — app para iPhone',
+           'termos_iphone': 'Termos de Uso — app para iPhone'},
+}
+DESCRICAO_IPHONE = {
+    'en': 'Meet new people and make friends: like profiles, chat when it is mutual.',
+    'pt': 'Conheça gente nova e faça amigos: curta perfis e converse quando a curtida for mútua.',
+}
+PALAVRAS_IPHONE = {
+    'en': 'make friends, meet new people, chat app, social app, new friends',
+    'pt': 'fazer amigos, conhecer pessoas, app de chat, bate-papo, novas amizades',
+}
+DOCS_LEGAIS = ('privacidade', 'termos', 'excluir', 'seguranca',
+               'privacidade_iphone', 'termos_iphone')
 
 
 # ===========================================================================
@@ -535,7 +564,7 @@ def seletor_idioma(cod, arquivo_por_idioma, t):
 
 
 def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld='',
-           tipo_og='website', imagem_og=None):
+           tipo_og='website', imagem_og=None, palavras=None):
     """Envolve o corpo no <head>, no cabeçalho e no rodapé."""
     t = IDIOMAS[cod]
     base = subir(cod)
@@ -564,7 +593,7 @@ def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld='',
 <meta name="theme-color" content="#080B0A">
 <title>{titulo}</title>
 <meta name="description" content="{descricao}">
-<meta name="keywords" content="{t['palavras']}">
+<meta name="keywords" content="{palavras or t['palavras']}">
 <link rel="canonical" href="{url(cod, arquivo)}">
 {alternates(grupo)}
 <link rel="icon" type="image/png" href="{base}assets/icone.png">
@@ -894,7 +923,7 @@ def documento(cod, qual):
     origem = CONTEUDO / FONTE_LEGAL[cod][qual]
     texto = origem.read_text(encoding='utf-8')
 
-    titulo = t['legal'][qual]
+    titulo = t['legal'].get(qual) or TITULOS_IPHONE[cod][qual]
     corpo_md = re.sub(r'^# .*\n', '', texto, count=1)
 
     quando = ''
@@ -929,6 +958,11 @@ def documento(cod, qual):
 </main>
 """
     grupo = {c: ARQ_LEGAL[c][qual] for c in COM_LEGAL}
+    if qual in TITULOS_IPHONE[cod]:
+        # Versão do iPhone: sem "anônimo/aleatório" (App Store, guideline 1.2).
+        descricao = f'{titulo} — {NOME}. {DESCRICAO_IPHONE[cod]}'[:158]
+        return moldar(cod, arquivo, f'{titulo} — {NOME}', descricao, corpo,
+                      grupo, palavras=PALAVRAS_IPHONE[cod])
     descricao = f'{titulo} — {NOME}. {t["descricao"]}'[:158]
     return moldar(cod, arquivo, f'{titulo} — {NOME}', descricao, corpo, grupo)
 
@@ -1113,14 +1147,14 @@ def main():
         contagem += 1
     print(f'  {len(ORDEM)} paginas iniciais')
 
-    for qual in ('privacidade', 'termos', 'excluir', 'seguranca'):
+    for qual in DOCS_LEGAIS:
         grupos.append({c: ARQ_LEGAL[c][qual] for c in COM_LEGAL})
         for cod in COM_LEGAL:
             destino = RAIZ / caminho(cod, ARQ_LEGAL[cod][qual])
             destino.parent.mkdir(parents=True, exist_ok=True)
             destino.write_text(documento(cod, qual), encoding='utf-8')
             contagem += 1
-    print(f'  {len(COM_LEGAL) * 4} paginas legais')
+    print(f'  {len(COM_LEGAL) * len(DOCS_LEGAIS)} paginas legais')
 
     grupos.append({c: 'blog.html' for c in BLOG_IDIOMAS})
     for cod in BLOG_IDIOMAS:

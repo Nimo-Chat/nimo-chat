@@ -1,6 +1,6 @@
 # Política de Privacidade — Nimo Chat
 
-**Última atualização:** 20 de outubro de 2026
+**Última atualização:** 29 de outubro de 2026
 
 O Nimo Chat é operado por **Leonardo Mondaine**, pessoa física, estabelecido
 na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil ("nós").
@@ -71,8 +71,8 @@ a proteção de menores.
 |---|---|---|
 | Apelido | sim | qualquer pessoa com quem você conversar |
 | Gênero (masculino/feminino) | sim | usado no pareamento; visível na conversa |
-| Interesses | não | quem conversa com você |
-| Frase de apresentação (bio) | não | quem conversa com você |
+| Interesses | não | quem conversa com você e quem vê "Pessoas para conhecer" (no iPhone) |
+| Frase de apresentação (bio) | não | quem conversa com você e quem vê "Pessoas para conhecer" (no iPhone) |
 | Foto de perfil | não | **somente pessoas que aceitaram sua amizade** |
 
 A foto de perfil merece destaque: o servidor **não entrega** sua foto para
@@ -95,6 +95,14 @@ automaticamente em 24 horas se nunca for aberto.
 - **Fila de pareamento:** enquanto você procura alguém, seu identificador,
   gênero e interesses ficam numa fila temporária, apagada assim que o
   pareamento acontece ou você desiste.
+- **Curtidas:** quem usa o Nimo no iPhone pode ver seu apelido, avatar, bio
+  e interesses em "Pessoas para conhecer" e curtir seu perfil. A curtida chega
+  para você como um convite de conversa; ela só começa se você responder.
+- **Convites:** seu código de convite, quem convidou você e quantos amigos
+  entraram com o seu código. No Android, quando alguém instala o Nimo pelo
+  link de convite, o app lê o código pela API Install Referrer do Google Play
+  (só o código; nenhum outro dado do link). Serve para dar o bônus de 3 dias
+  a quem convidou e a quem chegou.
 - **Token de notificação:** um código do Firebase Cloud Messaging para
   conseguirmos avisar você de mensagens novas. Você pode desligar as
   notificações a qualquer momento nas configurações.
@@ -182,6 +190,7 @@ Comissão Europeia. Os dados trafegam sempre criptografados.
 | Status | 24 horas |
 | Recado no mural | 24 horas |
 | Fila de pareamento | minutos |
+| Curtidas e convites | enquanto a conta existir |
 | Dados técnicos da chamada | apagados ao fim da chamada |
 | Denúncias | até 2 anos, para reincidência e defesa |
 | Registros exigidos por lei | conforme o prazo legal |

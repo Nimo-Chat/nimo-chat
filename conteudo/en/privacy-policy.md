@@ -1,6 +1,6 @@
 # Privacy Policy — Nimo Chat
 
-**Last updated:** October 20, 2026
+**Last updated:** October 29, 2026
 
 Nimo Chat is operated by **Leonardo Mondaine**, an individual, established at
 R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil ("we").
@@ -70,8 +70,8 @@ retain records of a ban for child protection.
 |---|---|---|
 | Nickname | yes | anyone you chat with |
 | Gender (male/female) | yes | used in matching; visible in the chat |
-| Interests | no | whoever chats with you |
-| Intro line (bio) | no | whoever chats with you |
+| Interests | no | whoever chats with you and people who see "People to meet" (on iPhone) |
+| Intro line (bio) | no | whoever chats with you and people who see "People to meet" (on iPhone) |
 | Profile photo | no | **only people who have accepted your friend request** |
 
 The profile photo deserves emphasis: the server **does not deliver** your
@@ -94,6 +94,14 @@ after 24 hours if it is never opened.
 - **Matching queue:** while you are looking for someone, your identifier,
   gender and interests sit in a temporary queue, deleted as soon as the match
   happens or you give up.
+- **Likes:** people using Nimo on iPhone can see your nickname, avatar, bio
+  and interests in "People to meet" and like your profile. The like reaches
+  you as a chat invite; the chat only starts if you reply.
+- **Invites:** your invite code, who invited you and how many friends joined
+  with your code. On Android, when someone installs Nimo from an invite link,
+  the app reads the code through Google Play's Install Referrer API (only the
+  code; no other data from the link). It is used to give the 3-day bonus to
+  the inviter and to the new user.
 - **Notification token:** a Firebase Cloud Messaging code so we can notify you
   of new messages. You can turn notifications off at any time in the settings.
 - **Friendships, blocks and reports.**
@@ -179,6 +187,7 @@ Commission. Data always travels encrypted.
 | Status | 24 hours |
 | Wall message | 24 hours |
 | Matching queue | minutes |
+| Likes and invites | while the account exists |
 | Technical call data | deleted when the call ends |
 | Reports | up to 2 years, for repeat offenses and legal defense |
 | Records required by law | as per the legal period |

@@ -1,6 +1,6 @@
 # Terms of Use — Nimo Chat
 
-**Last updated:** September 21, 2026
+**Last updated:** October 29, 2026
 
 These terms are the contract between you and **Leonardo Mondaine**, an
 individual based at R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil,
@@ -48,6 +48,7 @@ Nimo Chat exists for talking to strangers. That only works if everyone
 behaves. The following is **prohibited**:
 
 **Zero tolerance — immediate and permanent suspension:**
+
 - Any content involving minors, especially of a sexual nature
 - Nudity or sexual content sent without the other person having asked for it
 - Threats, incitement to violence or glorification of crime
@@ -55,6 +56,8 @@ behaves. The following is **prohibited**:
 - Recording or sharing conversations and calls without consent
 
 **Also prohibited:**
+
+- Creating fake accounts or using more than one account to get invite bonuses
 - Harassment, stalking, hate speech, racism, homophobia, transphobia or any
   discrimination
 - Spam, advertising, chain messages or promotion of other services

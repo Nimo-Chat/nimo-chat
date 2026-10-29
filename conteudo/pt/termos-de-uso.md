@@ -1,6 +1,6 @@
 # Termos de Uso — Nimo Chat
 
-**Última atualização:** 21 de setembro de 2026
+**Última atualização:** 29 de outubro de 2026
 
 Estes termos são o contrato entre você e **Leonardo Mondaine**, pessoa física
 estabelecida na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil,
@@ -49,6 +49,7 @@ O Nimo Chat existe para conversar com desconhecidos. Isso só funciona se todo
 mundo se comportar. É **proibido**:
 
 **Tolerância zero — suspensão imediata e permanente:**
+
 - Qualquer conteúdo envolvendo menores de idade, especialmente de natureza
   sexual
 - Nudez ou conteúdo sexual enviado sem que a outra pessoa tenha pedido
@@ -57,6 +58,8 @@ mundo se comportar. É **proibido**:
 - Gravar ou divulgar conversas e chamadas sem consentimento
 
 **Também proibido:**
+
+- Criar contas falsas ou usar mais de uma conta para ganhar bônus de convite
 - Assédio, perseguição, discurso de ódio, racismo, homofobia, transfobia ou
   qualquer discriminação
 - Spam, propaganda, correntes ou divulgação de outros serviços
