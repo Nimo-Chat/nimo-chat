@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.leonardomondaine.nimo",
+      "sha256_cert_fingerprints": ["9E:87:D9:83:35:43:C0:C6:E5:68:C7:42:5F:80:19:90:77:7D:6D:15:E9:5E:79:0A:F7:96:05:57:5D:9B:A9:A1"]
+    }
+  }
+]
