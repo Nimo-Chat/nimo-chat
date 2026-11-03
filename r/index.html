@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0F0E">
+<title>Nimo — Responder recado</title>
+<link rel="icon" type="image/png" href="../assets/icone.png">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:radial-gradient(120% 60% at 50% 0%,#11392D 0%,#0B0F0E 60%);color:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center}
+  main{width:100%;max-width:420px;padding:36px 22px 28px;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .marca{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:800}
+  .marca img{width:40px;height:40px;border-radius:12px}
+  .balao{width:100%;background:#fff;color:#0B0F0E;border-radius:24px 24px 24px 8px;padding:22px;font-size:22px;line-height:1.25;font-weight:800}
+  .botao{width:100%;height:58px;border-radius:16px;background:#2EE6A8;color:#06231A;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;text-decoration:none}
+  .botao.b{background:transparent;color:#2EE6A8;border:2px solid #2EE6A8;height:52px;font-size:16px}
+  .passos{width:100%;background:#131B19;border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#E3EAE7}
+  .passos b{color:#A8B4B0;font-size:12px;letter-spacing:.8px}
+  small{color:#8A9692;font-size:11px;text-align:center;line-height:1.5}
+  .teste{font-size:12px;color:#F2C14E;text-align:center}
+</style>
+</head>
+<body>
+<main>
+  <div class="marca"><img src="../assets/icone.png" alt=""><span>Nimo</span></div>
+  <div class="balao" id="texto">Tem um recado esperando sua resposta no Nimo.</div>
+
+  <a class="botao" id="botaoA" href="#">Responder no Nimo</a>
+  <a class="botao b" id="botaoB" href="#">Abrir direto na Play Store</a>
+
+  <div class="passos">
+    <b>COMO FUNCIONA</b>
+    <span>1. Instale o Nimo grátis</span>
+    <span>2. Escolha um apelido, sem e-mail nem telefone</span>
+    <span>3. O app abre direto no recado</span>
+  </div>
+  <p class="teste" id="aviso" hidden>Página de teste — código <span id="cod"></span> · teste <span id="tst"></span></p>
+  <small>Só para maiores de 18 anos.</small>
+</main>
+<script>
+(function () {
+  var PACOTE = 'com.leonardomondaine.nimo';
+  var REGISTRO = 'https://southamerica-east1-nimo---chat.cloudfunctions.net/registrarClique';
+  var q = new URLSearchParams(location.search);
+  var limpa = function (v, n) { return String(v || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, n); };
+  var codigo = limpa(q.get('c'), 12).toUpperCase();
+  var recado = limpa(q.get('r'), 40);
+  var teste = limpa(q.get('t'), 30);
+
+  // O que viaja dentro da instalação (Install Referrer da Play Store).
+  var partes = [];
+  if (codigo) partes.push('convite=' + codigo);
+  if (recado) partes.push('recado=' + recado);
+  if (teste) partes.push('teste=' + teste);
+  var referrer = encodeURIComponent(partes.join('&'));
+
+  var linkA = 'https://play.google.com/store/apps/details?id=' + PACOTE + (referrer ? '&referrer=' + referrer : '');
+  var linkB = 'market://details?id=' + PACOTE + (referrer ? '&referrer=' + referrer : '');
+  document.getElementById('botaoA').href = linkA;
+  document.getElementById('botaoB').href = linkB;
+
+  if (teste) {
+    document.getElementById('aviso').hidden = false;
+    document.getElementById('cod').textContent = codigo || '—';
+    document.getElementById('tst').textContent = teste;
+  }
+
+  function registrar(etapa) {
+    try {
+      var corpo = JSON.stringify({ etapa: etapa, teste: teste, codigo: codigo, recado: recado });
+      if (navigator.sendBeacon) navigator.sendBeacon(REGISTRO, corpo);
+      else fetch(REGISTRO, { method: 'POST', body: corpo, mode: 'no-cors', keepalive: true });
+    } catch (e) {}
+  }
+  registrar('abriu');
+  document.getElementById('botaoA').addEventListener('click', function () { registrar('botao_a'); });
+  document.getElementById('botaoB').addEventListener('click', function () { registrar('botao_b'); });
+})();
+</script>
+</body>
+</html>
