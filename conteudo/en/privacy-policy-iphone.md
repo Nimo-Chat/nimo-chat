@@ -1,6 +1,6 @@
 # Privacy Policy — Nimo Chat
 
-**Last updated:** October 29, 2026
+**Last updated:** November 6, 2026
 
 Nimo Chat is operated by **Leonardo Mondaine**, an individual, established at
 R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil ("we").
@@ -87,6 +87,19 @@ person and so that you can find it again later.
 **deleted from our server as soon as it is opened**, and deleted automatically
 after 24 hours if it is never opened.
 
+**Audio transcription.** If you tap "Transcribe" on a voice message, that
+audio is sent to Google Cloud (Vertex AI, Gemini model) only to produce the
+text. The text is stored with the message and disappears when the message is
+deleted. Under Google Cloud's terms, this content is not used to train
+Google's models. View-once audio is never transcribed.
+
+**Message translation.** If you tap "Translate" under a message in a chat
+or group discussion, the text of that message is sent to Google Cloud (Vertex AI,
+Gemini model) only to produce the translation. The translation is stored with the
+message, so other participants who use the same language can see it, and it
+disappears when the message is deleted. Under Google Cloud's terms, this content
+is not used to train Google's models.
+
 ### 2.4 Operational data
 - **Presence:** the time of your last access, so we can show how many people
   are online. This information is aggregated — no one can look up who
@@ -148,6 +161,7 @@ run the service on our behalf:
 | **Apple App Store / Google Play** | distribution and, where applicable, subscription payments | as per each store |
 | **RevenueCat** | validate subscription receipts, when subscriptions are active | United States |
 | **Google AdMob** (Google LLC) | showing ads to non-premium users | United States and others |
+| **Google Cloud – Vertex AI** (Google LLC) | transcribing an audio message or translating a text message, only when someone taps "Transcribe" or "Translate" | United States and others |
 | **TURN server** | relay call audio when the direct connection fails | to be defined — we have not contracted a TURN server yet |
 
 All of them are contractually required to use the data only to provide the

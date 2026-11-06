@@ -65,7 +65,7 @@
   <a class="voltar" href="../pt/index.html"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></svg> Voltar para o início</a>
   <div class="doc-cabeca">
     <h1>Política de Privacidade — app para iPhone</h1>
-    <p class="quando">Última atualização: 29 de outubro de 2026</p>
+    <p class="quando">Última atualização: 6 de novembro de 2026</p>
   </div>
   <div class="aviso"><p>Este documento está disponível em português e em inglês. A versão em inglês é a de referência para quem usa o app fora do Brasil.</p></div>
   <div class="doc-corpo">
@@ -171,6 +171,17 @@ Status de 24 horas e recados no mural. Guardamos esse conteúdo para entregá-lo
 <p><strong>Fotos e vídeos de visualização única</strong> são tratados de forma diferente: o
 arquivo é <strong>apagado do nosso servidor assim que é aberto</strong>, e apagado
 automaticamente em 24 horas se nunca for aberto.</p>
+<p><strong>Transcrição de áudio.</strong> Se você tocar em "Transcrever" numa mensagem de voz,
+aquele áudio é enviado ao Google Cloud (Vertex AI, modelo Gemini) só para
+gerar o texto. O texto fica salvo junto da mensagem e some quando ela é
+apagada. Pelos termos do Google Cloud, esse conteúdo não é usado para treinar
+os modelos do Google. Áudios de visualização única nunca são transcritos.</p>
+<p><strong>Tradução de mensagens.</strong> Se você tocar em "Traduzir" embaixo de uma mensagem
+no chat ou numa discussão em grupo, o texto dessa mensagem é enviado ao Google Cloud
+(Vertex AI, modelo Gemini) só para gerar a tradução. A tradução fica salva junto da
+mensagem, para que outros participantes que usam o mesmo idioma também a vejam, e
+some quando a mensagem é apagada. Pelos termos do Google Cloud, esse conteúdo não é
+usado para treinar os modelos do Google.</p>
 <h3>2.4 Dados de funcionamento</h3>
 <ul>
 <li><strong>Presença:</strong> o horário do seu último acesso, para mostrarmos quantas
@@ -272,6 +283,11 @@ limita a fornecedores que executam o serviço por nós:</p>
 <tr>
 <td><strong>Google AdMob</strong> (Google LLC)</td>
 <td>mostrar anúncio a quem não é premium</td>
+<td>Estados Unidos e outros</td>
+</tr>
+<tr>
+<td><strong>Google Cloud – Vertex AI</strong> (Google LLC)</td>
+<td>transcrever um áudio ou traduzir uma mensagem de texto, só quando alguém toca em "Transcrever" ou "Traduzir"</td>
 <td>Estados Unidos e outros</td>
 </tr>
 <tr>

@@ -438,6 +438,12 @@ for _cod in ORDEM:
         continue
     IDIOMAS[_cod] = importlib.import_module(f'traducoes.{_cod}').DADOS
 
+# Novidades de nov/2026 (discussão em grupo, recado nos Stories, reações):
+# só acrescentam cartões e perguntas, nos onze idiomas. Ver `novidades.py`.
+from novidades import aplicar as _aplicar_novidades  # noqa: E402
+
+_aplicar_novidades(IDIOMAS)
+
 
 def conferir():
     """Devolve os problemas encontrados. Lista vazia = tudo certo."""

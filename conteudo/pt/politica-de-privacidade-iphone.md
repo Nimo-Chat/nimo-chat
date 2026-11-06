@@ -1,6 +1,6 @@
 # Política de Privacidade — Nimo Chat
 
-**Última atualização:** 29 de outubro de 2026
+**Última atualização:** 6 de novembro de 2026
 
 O Nimo Chat é operado por **Leonardo Mondaine**, pessoa física, estabelecido
 na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil ("nós").
@@ -88,6 +88,19 @@ Status de 24 horas e recados no mural. Guardamos esse conteúdo para entregá-lo
 arquivo é **apagado do nosso servidor assim que é aberto**, e apagado
 automaticamente em 24 horas se nunca for aberto.
 
+**Transcrição de áudio.** Se você tocar em "Transcrever" numa mensagem de voz,
+aquele áudio é enviado ao Google Cloud (Vertex AI, modelo Gemini) só para
+gerar o texto. O texto fica salvo junto da mensagem e some quando ela é
+apagada. Pelos termos do Google Cloud, esse conteúdo não é usado para treinar
+os modelos do Google. Áudios de visualização única nunca são transcritos.
+
+**Tradução de mensagens.** Se você tocar em "Traduzir" embaixo de uma mensagem
+no chat ou numa discussão em grupo, o texto dessa mensagem é enviado ao Google Cloud
+(Vertex AI, modelo Gemini) só para gerar a tradução. A tradução fica salva junto da
+mensagem, para que outros participantes que usam o mesmo idioma também a vejam, e
+some quando a mensagem é apagada. Pelos termos do Google Cloud, esse conteúdo não é
+usado para treinar os modelos do Google.
+
 ### 2.4 Dados de funcionamento
 - **Presença:** o horário do seu último acesso, para mostrarmos quantas
   pessoas estão online. Essa informação é agregada — ninguém consegue
@@ -151,6 +164,7 @@ limita a fornecedores que executam o serviço por nós:
 | **Apple App Store / Google Play** | distribuição e, quando houver, pagamento de assinaturas | conforme cada loja |
 | **RevenueCat** | validar recibos de assinatura, quando as assinaturas estiverem ativas | Estados Unidos |
 | **Google AdMob** (Google LLC) | mostrar anúncio a quem não é premium | Estados Unidos e outros |
+| **Google Cloud – Vertex AI** (Google LLC) | transcrever um áudio ou traduzir uma mensagem de texto, só quando alguém toca em "Transcrever" ou "Traduzir" | Estados Unidos e outros |
 | **Servidor TURN** | repassar áudio de chamadas quando a conexão direta falha | a definir — ainda não contratamos servidor TURN |
 
 Todos são obrigados contratualmente a usar os dados apenas para nos prestar o
