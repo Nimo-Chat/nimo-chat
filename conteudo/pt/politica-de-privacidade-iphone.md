@@ -1,6 +1,6 @@
 # Política de Privacidade — Nimo Chat
 
-**Última atualização:** 6 de novembro de 2026
+**Última atualização:** 9 de novembro de 2026
 
 O Nimo Chat é operado por **Leonardo Mondaine**, pessoa física, estabelecido
 na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil ("nós").
@@ -100,6 +100,13 @@ no chat ou numa discussão em grupo, o texto dessa mensagem é enviado ao Google
 mensagem, para que outros participantes que usam o mesmo idioma também a vejam, e
 some quando a mensagem é apagada. Pelos termos do Google Cloud, esse conteúdo não é
 usado para treinar os modelos do Google.
+
+**Sua permissão vem primeiro.** A transcrição e a tradução usam a IA do Google
+(Gemini), um serviço de IA de terceiros. Antes da primeira vez que você usa uma
+delas, o app mostra um aviso explicando que o áudio ou o texto da mensagem será
+enviado ao Google e pede a sua permissão explícita. Nada é enviado sem você
+permitir, e você pode simplesmente não usar esses recursos — o resto do app
+funciona normalmente.
 
 ### 2.4 Dados de funcionamento
 - **Presença:** o horário do seu último acesso, para mostrarmos quantas
@@ -297,9 +304,11 @@ prazos legais.
 
 ## 11. Conteúdo de outras pessoas
 
-O Nimo Chat aproxima pessoas que ainda não se conhecem. Não lemos suas conversas: mensagens de
-texto não são revisadas por humanos, só passam por um filtro automático de
-palavras. Fotos enviadas passam por uma verificação automática adicional, sem
+O Nimo Chat aproxima pessoas que ainda não se conhecem. Não lemos suas conversas: as mensagens
+de texto das conversas privadas não passam por filtro automático nem por
+revisão — só são analisadas se alguém da conversa fizer uma denúncia.
+(Recados do Mural, publicações do Feed, Status e discussões em grupo, que
+outras pessoas veem, passam por um filtro automático de palavras.) Fotos enviadas passam por uma verificação automática adicional, sem
 revisão humana, que busca apenas sinais de nudez explícita ou violência
 gráfica em confiança máxima — quando identificado, o conteúdo é apagado
 automaticamente e a conta vai para revisão. Você é responsável pelo que

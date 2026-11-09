@@ -1,6 +1,6 @@
 # Privacy Policy — Nimo Chat
 
-**Last updated:** November 6, 2026
+**Last updated:** November 9, 2026
 
 Nimo Chat is operated by **Leonardo Mondaine**, an individual, established at
 R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil ("we").
@@ -99,6 +99,13 @@ Gemini model) only to produce the translation. The translation is stored with th
 message, so other participants who use the same language can see it, and it
 disappears when the message is deleted. Under Google Cloud's terms, this content
 is not used to train Google's models.
+
+**Your permission comes first.** Transcription and translation use Google's AI
+(Gemini), a third-party AI service. Before the first time you use either of
+them, the app shows a notice explaining that the audio or text of the message
+will be sent to Google and asks for your explicit permission. Nothing is sent
+unless you allow it, and you can simply not use these features — the rest of
+the app works normally.
 
 ### 2.4 Operational data
 - **Presence:** the time of your last access, so we can show how many people
@@ -296,8 +303,10 @@ ANPD within the legal deadlines.
 ## 11. Other people's content
 
 Nimo Chat brings together people who don't know each other yet. We do not read your conversations: text
-messages are not reviewed by humans, only checked by an automated keyword
-filter. Photos you send go through an additional automated check, with no
+messages in private chats are not automatically filtered or reviewed — they
+are only looked at if someone in the conversation reports it. (Wall notes,
+Feed posts, Status and group discussions, which other people see, go through
+an automated keyword filter.) Photos you send go through an additional automated check, with no
 human review, that looks only for maximum-confidence signals of explicit
 nudity or graphic violence — when detected, the content is automatically
 removed and the account is sent for review. You are responsible for what you
