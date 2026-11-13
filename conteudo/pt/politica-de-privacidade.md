@@ -1,6 +1,6 @@
 # Política de Privacidade — Nimo Chat
 
-**Última atualização:** 9 de novembro de 2026
+**Última atualização:** 13 de novembro de 2026
 
 O Nimo Chat é operado por **Leonardo Mondaine**, pessoa física, estabelecido
 na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil ("nós").
@@ -65,6 +65,28 @@ automático. Base legal: legítimo interesse e proteção de crianças e
 adolescentes (LGPD art. 7º, IX, e art. 14). O hash é apagado junto com a sua
 conta, exceto quando a lei nos obriga a guardar o registro de um banimento para
 a proteção de menores.
+
+### 2.1.2 Registros de acesso (endereço IP)
+O Marco Civil da Internet (Lei 12.965/2014, art. 15) obriga aplicativos como o
+Nimo a guardar os **registros de acesso à aplicação**: o endereço IP, a data e
+a hora de uso. A cada abertura do app registramos o **endereço IP**, a data, a
+hora, o identificador da sua conta, o sistema (Android ou iPhone) e a versão do
+app.
+
+Esses registros ficam **em sigilo por 6 meses** e depois são apagados
+automaticamente. Não usamos o IP para descobrir sua localização, para
+publicidade ou para criar perfil, e ele não aparece para ninguém no app. Só
+entregamos esses registros a uma autoridade mediante **ordem judicial** (Marco
+Civil, arts. 10 e 22), ou quando forem necessários para nos defender em
+processo judicial ou administrativo.
+
+**Preservação a pedido de autoridade.** A polícia, uma autoridade
+administrativa ou o Ministério Público podem pedir que registros de acesso
+específicos sejam guardados por mais tempo (Marco Civil, art. 15, §2º). Nesse
+caso, preservamos apenas os registros indicados no pedido, pelo prazo nele
+previsto, **sem entregá-los** — a entrega continua dependendo de ordem
+judicial. Cada preservação fica registrada: quem pediu, quando, o quê e por
+quanto tempo.
 
 ### 2.2 Dados de perfil, informados por você
 | Dado | Obrigatório | Quem vê |
@@ -158,6 +180,8 @@ falhas.
 | Criar sua conta e entregar suas mensagens | execução de contrato (art. 7º, V) |
 | Parear você com outra pessoa | execução de contrato |
 | Impedir abuso, spam e assédio | legítimo interesse (art. 7º, IX) |
+| Guardar registros de acesso (IP, data e hora) | cumprimento de obrigação legal (art. 7º, II — Marco Civil da Internet, art. 15) |
+| Defender nossos direitos em processo judicial ou administrativo | exercício regular de direitos (art. 7º, VI) |
 | Analisar falhas do aplicativo | legítimo interesse |
 | Enviar notificações | consentimento (art. 7º, I) — revogável |
 | Atender ordem judicial | cumprimento de obrigação legal (art. 7º, II) |
@@ -214,7 +238,8 @@ Comissão Europeia. Os dados trafegam sempre criptografados.
 | Curtidas e convites | enquanto a conta existir |
 | Dados técnicos da chamada | apagados ao fim da chamada |
 | Denúncias | até 2 anos, para reincidência e defesa |
-| Registros exigidos por lei | conforme o prazo legal |
+| Registros de acesso (IP, data e hora) | 6 meses (Marco Civil da Internet, art. 15); mais tempo só se uma autoridade pedir a preservação (seção 2.1.2) |
+| Outros registros exigidos por lei | conforme o prazo legal |
 
 ---
 
@@ -236,6 +261,12 @@ suas mensagens, publicações, status e arquivos dos nossos servidores.
 
 Excluir a conta **não cancela assinaturas**. O cancelamento é feito na App
 Store ou no Google Play.
+
+**O que fica guardado depois da exclusão, por obrigação legal:** os registros
+de acesso (IP, data e hora) até completarem 6 meses, ou pelo prazo de um
+pedido de preservação feito por autoridade (seção 2.1.2). Eles ficam em
+sigilo, fora do alcance do app, e só são usados para cumprir a lei ou defender
+direitos em processo.
 
 ---
 
@@ -266,9 +297,17 @@ Você também pode reclamar diretamente à **ANPD** (gov.br/anpd).
 O Nimo Chat é destinado a **maiores de 18 anos**. Não permitimos contas de
 menores de idade, e a declaração é feita no aceite dos termos.
 
-**Não tratamos dados de crianças e adolescentes.** Se descobrirmos que um
-menor de idade está usando o aplicativo, excluímos a conta e todos os dados
-imediatamente. Se você é responsável por um adolescente e quer que a conta
+**Não tratamos dados de crianças e adolescentes.** Se uma denúncia ou a nossa
+moderação indicar que a conta é de menor de idade, ela é suspensa.
+
+Após a análise e confirmação de que a conta pertence a uma pessoa menor de 18
+anos, o acesso será encerrado e a conta e seus conteúdos serão excluídos,
+ressalvados os registros cuja conservação seja necessária para o cumprimento
+de obrigações legais ou para a preservação de evidências em procedimentos
+cabíveis. A exclusão será realizada pela equipe responsável, seguindo os
+procedimentos internos de segurança e proteção de dados.
+
+Se você é responsável por um adolescente e quer que a conta
 dele seja removida, escreva para abuso@chatnimo.com — agimos no mesmo dia,
 sem exigir justificativa e sem pedir documento.
 

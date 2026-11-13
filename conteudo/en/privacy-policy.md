@@ -1,6 +1,6 @@
 # Privacy Policy — Nimo Chat
 
-**Last updated:** November 9, 2026
+**Last updated:** November 13, 2026
 
 Nimo Chat is operated by **Leonardo Mondaine**, an individual, established at
 R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil ("we").
@@ -64,6 +64,27 @@ a person, not banned automatically. Legal basis: legitimate interest and the
 protection of minors (LGPD art. 7, IX and art. 14; GDPR art. 6(1)(f)). The hash
 is deleted together with your account, except when we are legally required to
 retain records of a ban for child protection.
+
+### 2.1.2 Access logs (IP address)
+Brazil's Internet Civil Framework (Marco Civil da Internet, Law 12,965/2014,
+art. 15) requires apps like Nimo to keep **application access logs**: the IP
+address, date and time of use. Every time the app is opened we record the
+**IP address**, the date, the time, your account identifier, the system
+(Android or iPhone) and the app version.
+
+These logs are kept **confidential for 6 months** and then deleted
+automatically. We do not use the IP address to find out your location, for
+advertising or for profiling, and it is not shown to anyone in the app. We only
+hand these logs over to an authority under a **court order** (Marco Civil,
+arts. 10 and 22), or when they are needed to defend ourselves in judicial or
+administrative proceedings.
+
+**Preservation at an authority's request.** The police, an administrative
+authority or the Public Prosecutor's Office may ask for specific access logs
+to be kept for longer (Marco Civil, art. 15, §2). In that case we preserve only
+the logs named in the request, for the period it sets, **without handing them
+over** — disclosure still requires a court order. Every preservation is
+recorded: who asked, when, what and for how long.
 
 ### 2.2 Profile data, provided by you
 | Data | Required | Who sees it |
@@ -155,6 +176,8 @@ and the system version. It is used solely so we can fix failures.
 | Create your account and deliver your messages | performance of a contract (art. 7, V) |
 | Match you with another person | performance of a contract |
 | Prevent abuse, spam and harassment | legitimate interest (art. 7, IX) |
+| Keep access logs (IP, date and time) | compliance with a legal obligation (art. 7, II — Marco Civil da Internet, art. 15) |
+| Defend our rights in judicial or administrative proceedings | regular exercise of rights (art. 7, VI) |
 | Analyze app failures | legitimate interest |
 | Send notifications | consent (art. 7, I) — revocable |
 | Comply with a court order | compliance with a legal obligation (art. 7, II) |
@@ -211,7 +234,8 @@ Commission. Data always travels encrypted.
 | Likes and invites | while the account exists |
 | Technical call data | deleted when the call ends |
 | Reports | up to 2 years, for repeat offenses and legal defense |
-| Records required by law | as per the legal period |
+| Access logs (IP, date and time) | 6 months (Marco Civil da Internet, art. 15); longer only if an authority asks for preservation (section 2.1.2) |
+| Other records required by law | as per the legal period |
 
 ---
 
@@ -233,6 +257,12 @@ messages, posts, statuses and files from our servers.
 
 Deleting your account **does not cancel subscriptions**. Cancellation is done
 in the App Store or on Google Play.
+
+**What is kept after deletion, because the law requires it:** access logs (IP,
+date and time) until they are 6 months old, or for the period of a
+preservation request made by an authority (section 2.1.2). They are kept
+confidential, out of the app's reach, and used only to comply with the law or
+defend rights in legal proceedings.
 
 ---
 
@@ -264,8 +294,17 @@ You may also complain directly to the **ANPD** (gov.br/anpd).
 Nimo Chat is intended for people **18 and over**. We do not allow accounts for
 minors, and the declaration is made when accepting the terms.
 
-**We do not process data of children and adolescents.** If we find out that a
-minor is using the app, we delete the account and all data immediately. If you
+**We do not process data of children and adolescents.** If a report or our
+moderation indicates that an account belongs to a minor, it is suspended.
+
+After review and confirmation that the account belongs to a person under 18,
+access will be terminated and the account and its content will be deleted,
+except for records whose retention is necessary to comply with legal
+obligations or to preserve evidence in appropriate proceedings. Deletion is
+carried out by the responsible team, following internal security and data
+protection procedures.
+
+If you
 are responsible for a teenager and want their account removed, write to
 abuso@chatnimo.com — we act the same day, without requiring a reason and
 without asking for documents.

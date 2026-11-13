@@ -1,6 +1,6 @@
 # Terms of Use — Nimo Chat
 
-**Last updated:** October 29, 2026
+**Last updated:** November 13, 2026
 
 These terms are the contract between you and **Leonardo Mondaine**, an
 individual based at R. Presidente João Goulart, 675, Cascavel, Paraná, Brazil,
@@ -175,7 +175,9 @@ without prejudice to the rights guaranteed by the Consumer Protection Code.
 
 ## 10. Termination
 
-You can delete your account whenever you want, in Profile → Account.
+You can delete your account whenever you want, in Profile → Account. Even
+after deletion, because the law requires it, we keep confidential access logs
+(IP address, date and time) for 6 months — see the Privacy Policy.
 
 We may suspend or terminate your account if you break these terms, if there is
 suspected fraud or if the law requires it. Where possible, we will let you

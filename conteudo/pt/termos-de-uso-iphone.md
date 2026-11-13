@@ -1,6 +1,6 @@
 # Termos de Uso — Nimo Chat
 
-**Última atualização:** 29 de outubro de 2026
+**Última atualização:** 13 de novembro de 2026
 
 Estes termos são o contrato entre você e **Leonardo Mondaine**, pessoa física
 estabelecida na R. Presidente João Goulart, 675, Cascavel, Paraná, Brasil,
@@ -179,7 +179,9 @@ de Defesa do Consumidor.
 
 ## 10. Encerramento
 
-Você pode excluir sua conta quando quiser, em Perfil → Conta.
+Você pode excluir sua conta quando quiser, em Perfil → Conta. Mesmo depois
+da exclusão, guardamos em sigilo, por obrigação legal, os registros de acesso
+(endereço IP, data e hora) por 6 meses — veja a Política de Privacidade.
 
 Podemos suspender ou encerrar sua conta se você violar estes termos, se houver
 suspeita de fraude ou se a lei exigir. Quando possível, avisamos antes.
