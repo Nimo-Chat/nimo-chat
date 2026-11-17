@@ -55,7 +55,7 @@ A University of Kansas study published in 2018 in the *Journal of Social and Per
 
 - **No sign-up:** no email, phone number or password. Pick a nickname and you're in.
 - **Shared interests:** choose up to five and matching tries to pair you with people who like the same things.
-- **The Board:** instead of talking to someone live, leave a line that stays up for 24 hours, and whoever relates replies. Great if you'd rather the other person make the first move.
+- **The Wall:** instead of talking to someone live, leave a line that stays up for 24 hours, and whoever relates replies. Great if you'd rather the other person make the first move.
 - **Friends:** when a chat goes well, add the person. If they accept, you get a permanent conversation and a private Feed just for friends.
 - **Block and report** in one tap, with real moderation behind it.
 

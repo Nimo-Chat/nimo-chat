@@ -83,6 +83,6 @@ A good question has three things going for it:
 
 ## Where to practice
 
-The easiest way to get better is to talk more — with different people. On **Nimo Chat**, you tap search and get matched with someone who's online right now, with no sign-up, no email and no phone number. You can pick up to five interests to land with people who like the same things, and if nobody's online, you can leave a line on the **Board** and whoever relates can start a chat with you.
+The easiest way to get better is to talk more — with different people. On **Nimo Chat**, you tap search and get matched with someone who's online right now, with no sign-up, no email and no phone number. You can pick up to five interests to land with people who like the same things, and if nobody's online, you can leave a line on the **Wall** and whoever relates can start a chat with you.
 
 And if the conversation is good? Tap **Add friend** and, if they accept, it won't disappear when the chat ends.

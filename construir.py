@@ -118,11 +118,13 @@ DOCS_LEGAIS = ('privacidade', 'termos', 'excluir', 'seguranca',
 # nove. BLOG_TEXTOS é um dicionário pequeno e paralelo, só para os dois
 # idiomas que têm posts -- não mexe em nada do textos.py.
 # ===========================================================================
-BLOG_IDIOMAS = ['en', 'pt']
+BLOG_IDIOMAS = ['en', 'pt', 'es']   # es: nov/2026
 
 MESES_PT = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
             'julho', 'agosto', 'setembro', 'outubro', 'novembro',
             'dezembro']
+MESES_ES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio',
+            'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
 MESES_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
             'August', 'September', 'October', 'November', 'December']
 
@@ -130,6 +132,8 @@ MESES_EN = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
 def data_extenso(cod, d):
     if cod == 'pt':
         return f'{d.day} de {MESES_PT[d.month - 1]} de {d.year}'
+    if cod == 'es':
+        return f'{d.day} de {MESES_ES[d.month - 1]} de {d.year}'
     return f'{MESES_EN[d.month - 1]} {d.day}, {d.year}'
 
 
@@ -147,6 +151,7 @@ BLOG_TEXTOS = {
         'publicado': 'Published on',
         'cta_titulo': 'Curious to try it?',
         'cta_sub': 'Nimo Chat is free, with no sign-up required.',
+        'leia_tambem': 'Keep reading',
     },
     'pt': {
         'nav': 'Blog',
@@ -161,6 +166,22 @@ BLOG_TEXTOS = {
         'publicado': 'Publicado em',
         'cta_titulo': 'Curioso para experimentar?',
         'cta_sub': 'O Nimo Chat é grátis, sem precisar de cadastro.',
+        'leia_tambem': 'Leia também',
+    },
+    'es': {
+        'nav': 'Blog',
+        'titulo_index': 'Blog — Nimo Chat',
+        'descricao_index': ('Guías y artículos sobre chat anónimo, seguridad '
+                             'en línea y cómo funciona Nimo Chat.'),
+        'h1': 'El blog de Nimo Chat',
+        'sub': ('Notas sobre chat anónimo, seguridad en línea y cómo está '
+                'hecha la app.'),
+        'ler_mais': 'Leer más',
+        'voltar': 'Volver al blog',
+        'publicado': 'Publicado el',
+        'cta_titulo': '¿Con ganas de probarlo?',
+        'cta_sub': 'Nimo Chat es gratis y no necesita registro.',
+        'leia_tambem': 'Sigue leyendo',
     },
 }
 
@@ -372,7 +393,7 @@ BLOG_POSTS = [
                            'alternatives compare, and how Nimo Chat handles '
                            'the safety part.'),
             'fonte': 'blog/en/omegle-alternatives.md',
-            'imagem': 'assets/blog/buscar-en.png',
+            'imagem': 'assets/blog/capa-buscar-en.jpg',
             'alt': ("Nimo Chat's search screen showing live matching in "
                     'progress, with the number of people currently in the '
                     'queue to chat.'),
@@ -385,7 +406,7 @@ BLOG_POSTS = [
                            'procurar num substituto, como as alternativas '
                            'se comparam, e como o Nimo cuida da segurança.'),
             'fonte': 'blog/pt/alternativas-omegle.md',
-            'imagem': 'assets/blog/buscar-pt.png',
+            'imagem': 'assets/blog/capa-buscar-pt.jpg',
             'alt': ('Tela de busca do Nimo Chat mostrando o pareamento em '
                      'andamento, com o número de pessoas na fila para '
                      'conversar agora.'),
@@ -400,7 +421,7 @@ BLOG_POSTS = [
                            'Nimo Chat matches you with strangers and what '
                            '"safe" actually means with no account at all.'),
             'fonte': 'blog/en/anonymous-chat-no-signup.md',
-            'imagem': 'assets/blog/privacidade-en.png',
+            'imagem': 'assets/blog/capa-privacidade-en.jpg',
             'alt': 'Nimo Chat profile screen showing no email, no password, and no personal data stored, with automatic location removal and one-tap account deletion.',
         },
         'pt': {
@@ -410,7 +431,7 @@ BLOG_POSTS = [
                            'Como o pareamento do Nimo Chat funciona e o '
                            'que "seguro" quer dizer sem conta nenhuma.'),
             'fonte': 'blog/pt/chat-anonimo-sem-cadastro.md',
-            'imagem': 'assets/blog/privacidade-pt.png',
+            'imagem': 'assets/blog/capa-privacidade-pt.jpg',
             'alt': 'Tela de perfil do Nimo Chat mostrando sem e-mail, sem senha e nenhum dado pessoal guardado, com remoção automática de localização e exclusão da conta em um toque.',
         },
     },
@@ -418,12 +439,12 @@ BLOG_POSTS = [
         'data': date(2026, 9, 8),
         'en': {
             'arquivo': 'blog-the-board-meet-new-people.html',
-            'titulo': "The Board: How to Meet New People Even When Nobody's Online",
+            'titulo': "The Wall: How to Meet New People Even When Nobody's Online",
             'descricao': ('What happens when live matching finds no one? '
-                           'Inside the Board, the public 24-hour icebreaker '
+                           'Inside the Wall, the public 24-hour icebreaker '
                            "space in Nimo Chat's Discover tab."),
             'fonte': 'blog/en/the-board-meet-new-people.md',
-            'imagem': 'assets/blog/buscar-en.png',
+            'imagem': 'assets/blog/capa-buscar-en.jpg',
             'alt': "Nimo Chat's search screen showing live matching in progress, with the number of people currently in the queue to chat.",
         },
         'pt': {
@@ -433,7 +454,7 @@ BLOG_POSTS = [
                            'ninguém? Conheça o Mural, o espaço público de '
                            '24h da aba Buscar do Nimo Chat.'),
             'fonte': 'blog/pt/mural-conhecer-gente-nova.md',
-            'imagem': 'assets/blog/buscar-pt.png',
+            'imagem': 'assets/blog/capa-buscar-pt.jpg',
             'alt': 'Tela de busca do Nimo Chat mostrando o pareamento em andamento, com o número de pessoas na fila para conversar agora.',
         },
     },
@@ -446,7 +467,7 @@ BLOG_POSTS = [
                            'strangers safely, and how Nimo Chat was built '
                            'around each one of them.'),
             'fonte': 'blog/en/safety-tips-anonymous-chat.md',
-            'imagem': 'assets/blog/seguranca-en.png',
+            'imagem': 'assets/blog/capa-seguranca-en.jpg',
             'alt': "Nimo Chat conversation screen showing a view-once photo, deleted from the server as soon as it's opened.",
         },
         'pt': {
@@ -456,7 +477,7 @@ BLOG_POSTS = [
                            'mais segurança, e como o Nimo Chat foi '
                            'construído em volta de cada uma delas.'),
             'fonte': 'blog/pt/dicas-seguranca-chat-anonimo.md',
-            'imagem': 'assets/blog/seguranca-pt.png',
+            'imagem': 'assets/blog/capa-seguranca-pt.jpg',
             'alt': 'Tela de conversa do Nimo Chat mostrando uma foto de visualização única, apagada do servidor assim que é aberta.',
         },
     },
@@ -469,7 +490,7 @@ BLOG_POSTS = [
                            'Feed is the opposite: private, friends-only, '
                            'and invisible to everyone else.'),
             'fonte': 'blog/en/private-feed-for-friends.md',
-            'imagem': 'assets/blog/feed-en.png',
+            'imagem': 'assets/blog/capa-feed-en.jpg',
             'alt': "Nimo Chat's private Feed screen, showing posts visible only to accepted friends.",
         },
         'pt': {
@@ -479,11 +500,104 @@ BLOG_POSTS = [
                            'Feed é o oposto: privado, só entre amigos, e '
                            'invisível para todo o resto.'),
             'fonte': 'blog/pt/feed-privado-entre-amigos.md',
-            'imagem': 'assets/blog/feed-pt.png',
+            'imagem': 'assets/blog/capa-feed-pt.jpg',
             'alt': 'Tela do Feed privado do Nimo Chat, mostrando publicações visíveis só para amigos aceitos.',
         },
     },
 ]
+
+
+# Versão em espanhol de cada post (nov/2026). Fica separada para não
+# mexer na lista acima; a imagem é a mesma do inglês.
+BLOG_POSTS_ES = {
+    'blog-group-discussions.html': {
+        'arquivo': 'blog-discusiones-en-grupo.html',
+        'titulo': 'Chat en grupo con desconocidos: cómo funcionan las Discusiones de Nimo',
+        'descricao': 'Convierte un tema del Muro en un chat en grupo con hasta 15 personas que termina en 24 horas. Cómo crearla, ideas de temas y buenos modales.',
+        'fonte': 'blog/es/discusiones-en-grupo.md',
+        'alt': 'Ilustración de un círculo de personas alrededor de un gran globo de conversación, con globos más pequeños a su alrededor.',
+    },
+    'blog-talk-to-people-from-other-countries.html': {
+        'arquivo': 'blog-hablar-con-gente-de-otros-paises.html',
+        'titulo': 'Cómo hablar con gente de otros países (y practicar otro idioma) desde el celular',
+        'descricao': 'Por qué el texto es el mejor comienzo, 6 consejos para hablar con extranjeros y cómo ayudan la traducción y la transcripción de audio.',
+        'fonte': 'blog/es/hablar-con-gente-de-otros-paises.md',
+        'alt': 'Ilustración de un globo terráqueo con puntos conectados, rodeado de globos de conversación que dicen hola en portugués, inglés, español, japonés, ruso y turco.',
+    },
+    'blog-make-friends-as-an-adult.html': {
+        'arquivo': 'blog-hacer-amigos-en-la-adultez.html',
+        'titulo': 'Cómo hacer amigos en la adultez (cuando todo el mundo parece no tener tiempo)',
+        'descricao': 'Por qué la amistad se vuelve más difícil después de la escuela, cuánto tiempo lleva según la investigación y 7 pasos que funcionan.',
+        'fonte': 'blog/es/hacer-amigos-en-la-adultez.md',
+        'alt': 'Ilustración de una ciudad de noche con ventanas encendidas y personas unidas por líneas punteadas y globos de conversación.',
+    },
+    'blog-icebreaker-questions-for-strangers.html': {
+        'arquivo': 'blog-preguntas-para-iniciar-conversacion.html',
+        'titulo': '45 preguntas para iniciar una conversación con un desconocido (sin ser aburrido)',
+        'descricao': 'Basta de "hola, ¿qué tal?" que muere en el segundo mensaje. 45 preguntas para cada momento de la conversación y qué evitar al principio.',
+        'fonte': 'blog/es/preguntas-para-iniciar-conversacion.md',
+        'alt': 'Ilustración de dos personas en ciudades distintas, de noche, sonriendo al celular, unidas por globos de conversación con signos de interrogación.',
+    },
+    'blog-make-friends-online-when-shy.html': {
+        'arquivo': 'blog-hacer-amigos-online-timido.html',
+        'titulo': 'Cómo hacer amigos por internet si eres tímido: una guía sin presión',
+        'descricao': 'Por qué conversar por texto favorece a los más reservados, 7 pasos para hacer amigos sin forzar las cosas y los cuidados que importan.',
+        'fonte': 'blog/es/hacer-amigos-online-timido.md',
+        'alt': 'Ilustración de una joven con audífonos sentada en el piso de su cuarto de noche, sonriendo al celular, con globos de conversación flotando como luciérnagas.',
+    },
+    'blog-from-stranger-to-friend.html': {
+        'arquivo': 'blog-de-desconocido-a-amigo.html',
+        'titulo': 'De desconocido a amigo: cómo convertir un chat anónimo en una amistad de verdad',
+        'descricao': 'Las señales de que una conversación puede volverse amistad, cómo dar el siguiente paso sin presión y cómo funcionan los amigos en Nimo Chat.',
+        'fonte': 'blog/es/de-desconocido-a-amigo.md',
+        'alt': 'Ilustración de globos de conversación anónimos que brillan y se unen, convirtiéndose en dos amigos riendo juntos en una terraza de noche.',
+    },
+    'blog-why-its-easier-to-open-up-to-a-stranger.html': {
+        'arquivo': 'blog-desahogarse-con-un-desconocido.html',
+        'titulo': 'Por qué es más fácil desahogarse con un desconocido (y cómo hacerlo con seguridad)',
+        'descricao': 'El efecto del "desconocido en el tren" explicado, qué dice la investigación y cómo desahogarte en un chat anónimo sin exponerte.',
+        'fonte': 'blog/es/desahogarse-con-un-desconocido.md',
+        'alt': 'Ilustración de un hombre en un tren de noche, junto a la ventana con lluvia, escribiendo en el celular, con un globo de conversación que muestra un avatar anónimo escuchando.',
+    },
+    'blog-omegle-alternatives.html': {
+        'arquivo': 'blog-alternativas-omegle.html',
+        'titulo': 'Las mejores alternativas a Omegle en 2026: qué hace realmente segura a una de ellas',
+        'descricao': 'Omegle cerró en 2023. Qué buscar en un reemplazo, una comparación de las principales alternativas y cómo se diseñó Nimo Chat.',
+        'fonte': 'blog/es/alternativas-omegle.md',
+        'alt': 'Pantalla de búsqueda de Nimo Chat con el emparejamiento en curso y el número de personas en la fila para conversar ahora.',
+    },
+    'blog-anonymous-chat-no-signup.html': {
+        'arquivo': 'blog-chat-anonimo-sin-registro.html',
+        'titulo': 'Chat anónimo sin registro: cómo funciona y si es seguro usarlo',
+        'descricao': 'Qué significa de verdad "sin registro", cómo funciona el emparejamiento y qué hace seguro un chat anónimo.',
+        'fonte': 'blog/es/chat-anonimo-sin-registro.md',
+        'alt': 'Pantalla de perfil de Nimo Chat que muestra que no hay correo, contraseña ni datos personales guardados, con eliminación de la cuenta en un toque.',
+    },
+    'blog-the-board-meet-new-people.html': {
+        'arquivo': 'blog-muro-conocer-gente-nueva.html',
+        'titulo': 'El Muro: cómo conocer gente nueva aunque no haya nadie en línea',
+        'descricao': '¿Qué pasa cuando el emparejamiento en vivo no encuentra a nadie? Así funciona el Muro, el espacio público de 24 horas de Nimo Chat.',
+        'fonte': 'blog/es/muro-conocer-gente-nueva.md',
+        'alt': 'Pantalla de búsqueda de Nimo Chat con el emparejamiento en curso y el número de personas en la fila para conversar ahora.',
+    },
+    'blog-safety-tips-anonymous-chat.html': {
+        'arquivo': 'blog-consejos-seguridad-chat-anonimo.html',
+        'titulo': '5 consejos de seguridad para usar un chat anónimo sin dolores de cabeza',
+        'descricao': 'Cinco prácticas que valen para cualquier chat anónimo: no dar datos reales, denunciar en el momento, desconfiar de quien te saca de la app y más.',
+        'fonte': 'blog/es/consejos-seguridad-chat-anonimo.md',
+        'alt': 'Pantalla de conversación de Nimo Chat con una foto de visualización única, que se borra del servidor en cuanto se abre.',
+    },
+    'blog-private-feed-for-friends.html': {
+        'arquivo': 'blog-feed-privado-entre-amigos.html',
+        'titulo': 'El Feed privado: el espacio que solo existe entre tú y tus amigos',
+        'descricao': 'Anónimo con desconocidos, cerrado con amigos: cómo funciona el Feed privado de Nimo Chat y por qué está separado del resto.',
+        'fonte': 'blog/es/feed-privado-entre-amigos.md',
+        'alt': 'Pantalla del Feed privado de Nimo Chat, con publicaciones visibles solo para los amigos aceptados.',
+    },
+}
+for _p in BLOG_POSTS:
+    _p['es'] = dict(BLOG_POSTS_ES[_p['en']['arquivo']],
+                    imagem=_p['en']['imagem'])
 
 
 # ===========================================================================
@@ -1174,6 +1288,33 @@ def pagina_blog_index(cod):
                   corpo, grupo)
 
 
+def leia_tambem(cod, post, quantos=3):
+    """Três outras matérias no fim do post (nov/2026): links internos ajudam
+    o Google a achar e valorizar o blog, e quem leu até o fim tem para onde
+    ir. Pega as seguintes da lista (dando a volta), então cada post aponta
+    para posts diferentes e nenhum fica sem receber link."""
+    i = BLOG_POSTS.index(post)
+    outros = [p for p in BLOG_POSTS[i + 1:] + BLOG_POSTS[:i] if cod in p]
+    cartoes = []
+    for o in outros[:quantos]:
+        p = o[cod]
+        cartoes.append(f"""
+    <article class="post-cartao">
+      <a href="{link(cod, cod, p['arquivo'])}">
+        <img src="{subir(cod)}{p['imagem']}" alt="" width="1200" height="630"
+          loading="lazy">
+        <div class="post-cartao-corpo">
+          <h3>{p['titulo']}</h3>
+        </div>
+      </a>
+    </article>""")
+    return f"""  <section class="relacionados" aria-labelledby="leia-tambem">
+    <h2 id="leia-tambem">{BLOG_TEXTOS[cod]['leia_tambem']}</h2>
+    <div class="relacionados-grade">{''.join(cartoes)}
+    </div>
+  </section>"""
+
+
 def pagina_blog_post(cod, post):
     t = IDIOMAS[cod]
     bt = BLOG_TEXTOS[cod]
@@ -1203,6 +1344,7 @@ def pagina_blog_post(cod, post):
     <p>{bt['cta_sub']}</p>
     {lojas(t, cod)}
   </div>
+{leia_tambem(cod, post)}
 </main>
 """
     grupo = {c: post[c]['arquivo'] for c in BLOG_IDIOMAS}
@@ -1236,8 +1378,39 @@ def pagina_erro():
 # ===========================================================================
 # Buscadores
 # ===========================================================================
-def sitemap(grupos):
+# Data de modificação de cada página no sitemap (nov/2026). Antes era
+# sempre o dia do build, em todas as páginas, e o Google aprende a ignorar
+# um <lastmod> que nunca é verdade. Agora o build guarda um resumo (hash) de
+# cada página em lastmod.json e só troca a data quando a página mudou.
+ARQ_LASTMOD = RAIZ / 'lastmod.json'
+
+
+def datas_de_modificacao(grupos, data_inicial):
+    import hashlib
+    import json
+    try:
+        antes = json.loads(ARQ_LASTMOD.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        antes = {}
     hoje = date.today().isoformat()
+    agora = {}
+    for grupo in grupos:
+        for c, a in grupo.items():
+            u = url(c, a)
+            h = hashlib.sha256((RAIZ / caminho(c, a)).read_bytes()).hexdigest()
+            velho = antes.get(u)
+            if velho and velho.get('hash') == h:
+                agora[u] = velho
+            elif velho:
+                agora[u] = {'hash': h, 'data': hoje}
+            else:
+                agora[u] = {'hash': h, 'data': data_inicial.get(u, hoje)}
+    ARQ_LASTMOD.write_text(json.dumps(agora, indent=1, sort_keys=True) + '\n',
+                           encoding='utf-8')
+    return {u: v['data'] for u, v in agora.items()}
+
+
+def sitemap(grupos, datas):
     linhas = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
               '        xmlns:xhtml="http://www.w3.org/1999/xhtml">']
@@ -1251,7 +1424,8 @@ def sitemap(grupos):
                     f'href="{url(IDIOMA_RAIZ, grupo[IDIOMA_RAIZ])}"/>')
         for c, a in grupo.items():
             linhas.append(f'  <url>\n    <loc>{url(c, a)}</loc>'
-                          f'\n    <lastmod>{hoje}</lastmod>{alt}\n  </url>')
+                          f'\n    <lastmod>{datas[url(c, a)]}</lastmod>'
+                          f'{alt}\n  </url>')
     linhas.append('</urlset>')
     return '\n'.join(linhas) + '\n'
 
@@ -1310,7 +1484,12 @@ def main():
           f'{len(BLOG_IDIOMAS)} idiomas')
 
     (RAIZ / '404.html').write_text(pagina_erro(), encoding='utf-8')
-    (RAIZ / 'sitemap.xml').write_text(sitemap(grupos), encoding='utf-8')
+    # Na primeira vez (sem lastmod.json), os posts ganham a data em que
+    # foram publicados; o resto, a data de hoje.
+    inicial = {url(c, p[c]['arquivo']): p['data'].isoformat()
+               for p in BLOG_POSTS for c in BLOG_IDIOMAS if c in p}
+    datas = datas_de_modificacao(grupos, inicial)
+    (RAIZ / 'sitemap.xml').write_text(sitemap(grupos, datas), encoding='utf-8')
     (RAIZ / 'robots.txt').write_text(ROBOTS, encoding='utf-8')
     # GitHub Pages ignora a pasta se este arquivo nao existir e o repo tiver
     # nome comecando com underscore em algum lugar. Custa nada e evita dor.

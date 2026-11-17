@@ -788,7 +788,9 @@ a.loja-oficial:hover {
    para não cortar. O atributo height="630" do <img> fixava 630px e o
    object-fit cortava a ilustração no celular. As capas antigas (prints do
    app, verticais) continuam como estavam. */
-.post-capa[src*="/ia-"], .post-cartao img[src*="/ia-"] { height: auto; }
+/* nov/2026: as capas com print do app também viraram 1200x630
+   (assets/blog/capa-*.jpg), então vale para todas. */
+.post-capa, .post-cartao img { height: auto; }
 
 .post-cta {
   margin-top: 54px; padding: 34px 30px; text-align: center;
@@ -798,6 +800,14 @@ a.loja-oficial:hover {
 .post-cta h3 { margin: 0 0 8px; color: var(--texto); }
 .post-cta p { margin: 0 0 20px; color: var(--texto-2); }
 .post-cta .lojas { justify-content: center; margin-top: 0; }
+
+/* "Leia também" no fim dos posts (nov/2026) */
+.relacionados { margin-top: 64px; }
+.relacionados h2 { font-size: 22px; letter-spacing: -.02em; margin: 0 0 20px; color: var(--texto); }
+.relacionados-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.relacionados .post-cartao-corpo { padding: 16px 18px 18px; }
+.relacionados .post-cartao-corpo h3 { font-size: 15.5px; line-height: 1.35; margin: 0; color: var(--texto); letter-spacing: -.01em; }
+@media (max-width: 760px) { .relacionados-grade { grid-template-columns: 1fr; } }
 
 @media (max-width: 620px) {
   .blog-grade { grid-template-columns: 1fr; }
