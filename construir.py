@@ -545,6 +545,7 @@ I_RELOGIO = svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>')
 I_GLOBO = svg('<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>'
               '<path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/>', 17)
 I_ENVIAR = svg('<path d="M4 12h15"/><path d="m13 6 6 6-6 6"/>', 17)
+I_SETA_BAIXO = svg('<path d="m6 9 6 6 6-6"/>', 15)
 I_SETA_ESQ = svg('<path d="M19 12H5"/><path d="m11 6-6 6 6 6"/>', 15)
 
 I_GRUPO = svg('<circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 '
@@ -662,17 +663,45 @@ def seletor_idioma(cod, arquivo_por_idioma, t):
         atual = ' aria-current="true"' if c == cod else ''
         itens.append(f'<a href="{link(cod, c, arq)}" lang="'
                      f'{IDIOMAS[c]["html_lang"]}"{atual}>'
-                     f'{IDIOMAS[c]["idioma"]}</a>')
+                     f'<span class="seletor-nome">{IDIOMAS[c]["idioma"]}</span>'
+                     f'<span class="seletor-cod">{c.upper()}</span></a>')
+    # nov/2026: lista em duas colunas, sem barra de rolagem; o script curto
+    # só fecha a lista ao clicar fora ou apertar Esc (sem ele, continua
+    # funcionando: é um <details> comum).
     return f"""<details class="seletor">
   <summary aria-label="{t['idioma_label']}">{I_GLOBO}
-    <span>{IDIOMAS[cod]['idioma']}</span></summary>
+    <span>{IDIOMAS[cod]['idioma']}</span>{I_SETA_BAIXO}</summary>
   <div class="seletor-lista">{''.join(itens)}</div>
-</details>"""
+</details>
+<script>(function(){{var d=document.currentScript.previousElementSibling;
+document.addEventListener('click',function(e){{if(d.open&&!d.contains(e.target))d.open=false;}});
+document.addEventListener('keydown',function(e){{if(e.key==='Escape')d.open=false;}});}})();</script>"""
+
+
+def nova_aba(html):
+    """Links para fora do site (lojas, fontes citadas) abrem em nova aba,
+    para a pessoa não perder a página do Nimo (nov/2026)."""
+    def troca(m):
+        tag = m.group(0)
+        if 'target=' in tag:
+            return tag
+        tag = tag[:-1] + ' target="_blank">'
+        if 'rel=' not in tag:
+            tag = tag[:-1] + ' rel="noopener">'
+        return tag
+    return re.sub(r'<a\s[^>]*href="https?://(?!chatnimo\.com)[^"]*"[^>]*>',
+                  troca, html)
 
 
 def moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld='',
            tipo_og='website', imagem_og=None, palavras=None):
     """Envolve o corpo no <head>, no cabeçalho e no rodapé."""
+    return nova_aba(_moldar(cod, arquivo, titulo, descricao, corpo, grupo,
+                            jsonld, tipo_og, imagem_og, palavras))
+
+
+def _moldar(cod, arquivo, titulo, descricao, corpo, grupo, jsonld='',
+            tipo_og='website', imagem_og=None, palavras=None):
     t = IDIOMAS[cod]
     base = subir(cod)
     inicio = link(cod, cod, 'index.html')

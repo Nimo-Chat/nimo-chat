@@ -315,24 +315,49 @@ a.loja-oficial:hover {
 .seletor summary::-webkit-details-marker { display: none; }
 .seletor summary:hover { color: var(--texto); border-color: var(--menta); }
 .seletor summary svg { color: var(--menta); flex: none; }
+.seletor summary svg:last-child { transition: transform .2s var(--curva); opacity: .7; }
+.seletor[open] summary { color: var(--texto); border-color: var(--menta);
+  background: rgba(46, 230, 168, .08); }
+.seletor[open] summary svg:last-child { transform: rotate(180deg); }
 .seletor-lista {
-  position: absolute; top: calc(100% + 10px); inset-inline-end: 0; z-index: 60;
-  min-width: 190px; padding: 8px;
-  background: var(--superficie); border: 1px solid var(--borda-forte);
-  border-radius: 16px; box-shadow: 0 24px 54px rgba(0, 0, 0, .6);
-  display: grid; gap: 2px;
-  max-height: 62vh; overflow-y: auto;
+  position: absolute; top: calc(100% + 12px); inset-inline-end: 0; z-index: 60;
+  width: min(380px, calc(100vw - 32px)); padding: 10px;
+  background: var(--superficie);
+  border: 1px solid var(--borda-forte); border-radius: 20px;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, .65), 0 0 0 1px rgba(46, 230, 168, .05);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+  animation: seletor-abre .18s var(--curva);
+}
+@keyframes seletor-abre {
+  from { opacity: 0; transform: translateY(-6px) scale(.98); }
+  to   { opacity: 1; transform: none; }
 }
 .seletor-lista a {
-  padding: 9px 13px; border-radius: 10px; font-size: 14.5px;
-  color: var(--texto-2);
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 10px 12px; border-radius: 12px; font-size: 14.5px;
+  color: var(--texto-2); border: 1px solid transparent;
+  transition: background .15s, color .15s, border-color .15s;
 }
-.seletor-lista a:hover { background: rgba(46, 230, 168, .10); color: var(--menta); }
-.seletor-lista a[aria-current] { color: var(--menta); font-weight: 650; }
+.seletor-cod {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .06em;
+  padding: 2px 7px; border-radius: 100px;
+  color: var(--suave); background: rgba(255, 255, 255, .05);
+}
+.seletor-lista a:hover { background: rgba(46, 230, 168, .08); color: var(--texto); }
+.seletor-lista a:hover .seletor-cod { color: var(--menta); }
+.seletor-lista a[aria-current] {
+  color: var(--menta); font-weight: 650;
+  background: rgba(46, 230, 168, .10); border-color: rgba(46, 230, 168, .30);
+}
+.seletor-lista a[aria-current] .seletor-cod { background: var(--menta); color: #04150F; }
 
 @media (max-width: 700px) {
   .seletor summary span { display: none; }
   .seletor summary { padding: 8px 11px; }
+  .seletor summary svg:last-child { display: none; }
+  /* no celular a lista ocupa a largura da tela, logo abaixo do topo */
+  .seletor-lista { position: fixed; top: 76px; left: 16px; right: 16px;
+    width: auto; }
 }
 
 /* lista completa de idiomas no rodape — para leitor e para robo de busca */
