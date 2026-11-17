@@ -58,6 +58,7 @@ IDIOMAS['pt'] = {
     'btn_como': 'Ver como funciona',
     'notas': ['Grátis para usar', 'Premium sem anúncios', '11 idiomas'],
     'em_breve': 'Em breve',
+    'nota_iphone': 'No iPhone, procure por <b>Nimo Chat: Fazer Amigos</b>.',
 
     'chat': {
         'nome': 'Lira',
@@ -189,11 +190,14 @@ IDIOMAS['pt'] = {
         ('Qual a idade mínima?',
          ['18 anos. Conta que aparenta ser de menor de idade é suspensa '
           'imediatamente quando denunciada, antes mesmo da revisão humana.']),
+        ('Por que no iPhone o nome é outro?',
+         ['Na App Store, o Nimo se chama <b>Nimo Chat: Fazer Amigos</b> e funciona um pouco diferente: lá não tem a busca aleatória. A conversa começa quando duas pessoas se curtem na seção Pessoas, quando alguém responde um recado no Mural ou entre amigos.',
+          'A conta é a mesma nos dois: com o código de recuperação, você entra no iPhone com a conta que já usa no Android.']),
     ],
 
     'olho_baixar': 'Baixar',
     'h_baixar': 'Uma conversa começa em segundos',
-    'sub_baixar': ('Grátis e sem cadastro. Disponível para Android. iPhone em breve.'),
+    'sub_baixar': ('Grátis e sem cadastro. Disponível para Android e iPhone.'),
 
     'rodape_sobre': ('Conversas anônimas com pessoas novas. Sem e-mail, sem '
                      'telefone, sem nome real.'),
@@ -257,6 +261,7 @@ IDIOMAS['en'] = {
     'btn_como': 'See how it works',
     'notas': ['Free to use', 'Ad-free with Premium', '11 languages'],
     'em_breve': 'Coming soon',
+    'nota_iphone': 'On iPhone, look for <b>Nimo Chat: Fazer Amigos</b>.',
 
     'chat': {
         'nome': 'Lira',
@@ -390,11 +395,14 @@ IDIOMAS['en'] = {
         ('What is the minimum age?',
          ['18. An account that appears to belong to a minor is suspended '
           'immediately when reported, before human review even starts.']),
+        ('Why does the app have a different name on iPhone?',
+         ['On the App Store, Nimo is called <b>Nimo Chat: Fazer Amigos</b> and works a little differently: there is no random matching. A conversation starts when two people like each other in the People section, when someone replies to a note on the Wall, or between friends.',
+          'Your account works on both: with your recovery code, you can sign in on iPhone with the account you already use on Android.']),
     ],
 
     'olho_baixar': 'Get the app',
     'h_baixar': 'A conversation starts in seconds',
-    'sub_baixar': ('Free and no sign-up. Available on Android. iPhone coming soon.'),
+    'sub_baixar': ('Free and no sign-up. Available on Android and iPhone.'),
 
     'rodape_sobre': ('Anonymous conversations with new people. No email, no '
                      'phone number, no real name.'),

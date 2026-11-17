@@ -241,6 +241,11 @@ em.destaque {
 /* ------------------------------------------------------- selo das lojas -- */
 .lojas { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 36px; }
 .centro .lojas, .chamada .lojas { justify-content: center; }
+.lojas-nota {
+  margin-top: 12px; font-size: 13px; color: var(--texto-2, rgba(255,255,255,.62));
+}
+.lojas-nota b { color: var(--texto); font-weight: 600; }
+.centro .lojas-nota, .chamada .lojas-nota, .post-cta .lojas-nota { text-align: center; }
 
 .loja {
   display: inline-flex; align-items: center; gap: 11px;

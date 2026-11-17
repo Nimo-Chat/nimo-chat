@@ -54,7 +54,7 @@ EMAIL_ABUSO = 'abuso@chatnimo.com'
 # Preencha quando cada loja aprovar o app. Enquanto estiver vazio, o botão
 # daquela loja aparece apagado, com a tarja "em breve", e não é clicável.
 LINK_PLAY = 'https://play.google.com/store/apps/details?id=com.leonardomondaine.nimo'
-LINK_APPLE = ''
+LINK_APPLE = 'https://apps.apple.com/app/id6805645891'
 
 IDIOMA_RAIZ = 'en'
 
@@ -168,6 +168,88 @@ BLOG_TEXTOS = {
 # As imagens são screenshots reais do app ou ilustrações de IA (assets/blog/), e os arquivos-
 # fonte ficam em conteudo/blog/<idioma>/, junto dos documentos legais.
 BLOG_POSTS = [
+    # --- Nov/2026: 3 matérias novas (amizade adulta, outros países com
+    # tradução/transcrição, discussões em grupo). Ilustrações feitas em SVG,
+    # nas cores do site, sem texto além de saudações.
+    {
+        'data': date(2026, 11, 17),
+        'en': {
+            'arquivo': 'blog-group-discussions.html',
+            'titulo': 'Group Chat With Strangers: How Discussions Work on Nimo',
+            'descricao': ('Turn a topic on the Wall into a group chat with up '
+                           'to 15 people that ends in 24 hours. How to start '
+                           'one, topic ideas and group etiquette.'),
+            'fonte': 'blog/en/group-discussions.md',
+            'imagem': 'assets/blog/ia-discussoes.jpg',
+            'alt': ('Illustration of a circle of people around a large '
+                    'chat bubble, with smaller bubbles floating around '
+                    'them.'),
+        },
+        'pt': {
+            'arquivo': 'blog-discussoes-em-grupo.html',
+            'titulo': 'Chat em grupo com desconhecidos: como funcionam as Discussões do Nimo',
+            'descricao': ('Transforme um tema do Mural num bate-papo em grupo '
+                           'com até 15 pessoas, que termina em 24 horas. Como '
+                           'criar, ideias de tema e boas maneiras.'),
+            'fonte': 'blog/pt/discussoes-em-grupo.md',
+            'imagem': 'assets/blog/ia-discussoes.jpg',
+            'alt': ('Ilustração de uma roda de pessoas em volta de um grande '
+                    'balão de conversa, com balões menores ao redor.'),
+        },
+    },
+    {
+        'data': date(2026, 11, 17),
+        'en': {
+            'arquivo': 'blog-talk-to-people-from-other-countries.html',
+            'titulo': 'How to Talk to People From Other Countries (and Practice a Language) on Your Phone',
+            'descricao': ('Why text is the best way to start, six tips for '
+                           'chatting across cultures, and how message '
+                           'translation and voice transcription help.'),
+            'fonte': 'blog/en/talk-to-people-from-other-countries.md',
+            'imagem': 'assets/blog/ia-outros-paises.jpg',
+            'alt': ('Illustration of a globe with connected points, '
+                    'surrounded by chat bubbles saying hello in Portuguese, '
+                    'English, Spanish, Japanese, Russian and Turkish.'),
+        },
+        'pt': {
+            'arquivo': 'blog-conversar-com-gente-de-outros-paises.html',
+            'titulo': 'Como conversar com gente de outros países (e treinar outro idioma) pelo celular',
+            'descricao': ('Por que o texto é o melhor começo, 6 dicas para '
+                           'conversar com estrangeiros e como a tradução e a '
+                           'transcrição de áudio ajudam.'),
+            'fonte': 'blog/pt/conversar-com-gente-de-outros-paises.md',
+            'imagem': 'assets/blog/ia-outros-paises.jpg',
+            'alt': ('Ilustração de um globo com pontos ligados, cercado de '
+                    'balões de conversa dizendo olá em português, inglês, '
+                    'espanhol, japonês, russo e turco.'),
+        },
+    },
+    {
+        'data': date(2026, 11, 17),
+        'en': {
+            'arquivo': 'blog-make-friends-as-an-adult.html',
+            'titulo': 'How to Make Friends as an Adult (When Everyone Seems Too Busy)',
+            'descricao': ('Why friendship gets harder after school, what '
+                           'research says about the time it takes, and seven '
+                           'steps that actually work.'),
+            'fonte': 'blog/en/make-friends-as-an-adult.md',
+            'imagem': 'assets/blog/ia-vida-adulta.jpg',
+            'alt': ('Illustration of a city at night with lit windows and '
+                    'people connected by dotted lines and chat bubbles.'),
+        },
+        'pt': {
+            'arquivo': 'blog-fazer-amigos-vida-adulta.html',
+            'titulo': 'Como fazer amigos na vida adulta (quando todo mundo parece sem tempo)',
+            'descricao': ('Por que fazer amizade fica mais difícil depois da '
+                           'escola, quanto tempo leva segundo a pesquisa e 7 '
+                           'passos que funcionam.'),
+            'fonte': 'blog/pt/fazer-amigos-vida-adulta.md',
+            'imagem': 'assets/blog/ia-vida-adulta.jpg',
+            'alt': ('Ilustração de uma cidade à noite com janelas acesas e '
+                    'pessoas ligadas por linhas pontilhadas e balões de '
+                    'conversa.'),
+        },
+    },
     # --- Out/2026: 4 matérias novas com ilustrações geradas por IA
     # (Gemini), mesma imagem para en e pt (sem texto dentro da imagem).
     {
@@ -489,6 +571,16 @@ ICONES_RECURSO = [I_OLHO, I_MIC, I_CORACAO, I_RELOGIO, I_RAIO,
 #   Google:  https://play.google.com/intl/en_us/badges/
 #   Apple:   https://developer.apple.com/app-store/marketing/guidelines/
 
+# nov/2026: os dois voltaram ao selo montado (o Leo preferiu o visual, e
+# fica igual nos onze idiomas). selo_play() e assets/badges/ continuam aqui
+# caso um dia queira a arte oficial de novo.
+LOGO_PLAY = """<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+<path fill="#00D2FF" d="M3.5 2.1 13.2 11.8 3.5 21.5c-.31-.25-.5-.64-.5-1.11V3.21c0-.47.19-.86.5-1.11z"/>
+<path fill="#00E27A" d="M3.5 2.1c.31-.25.76-.27 1.24-.01l11.55 6.59-3.09 3.12L3.5 2.1z"/>
+<path fill="#FFC400" d="m16.29 8.68 3.63 2.07c.91.52.91 1.58 0 2.1l-3.63 2.07-3.09-3.12 3.09-3.12z"/>
+<path fill="#FF3A44" d="M3.5 21.5 13.2 11.8l3.09 3.12L4.74 21.5c-.48.27-.93.25-1.24-.01z"/>
+</svg>"""
+
 LOGO_APPLE = """<svg viewBox="0 0 24 24" width="25" height="25" aria-hidden="true">
 <path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 14.25 3.51 5.32 9.05 5.05c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.34zM12.03 4.99C11.88 2.71 13.73.83 15.85.7c.29 2.64-2.4 4.6-3.82 4.29z"/>
 </svg>"""
@@ -528,10 +620,14 @@ def selo_loja(logo, linha1, linha2, href, breve, rotulo):
 def lojas(t, cod):
     return (
         '<div class="lojas">'
-        + selo_play(cod, LINK_PLAY, t['em_breve'], f'{NOME} — Google Play')
+        + selo_loja(LOGO_PLAY, 'GET IT ON', 'Google Play', LINK_PLAY,
+                    t['em_breve'], f'{NOME} — Google Play')
         + selo_loja(LOGO_APPLE, 'Download on the', 'App Store', LINK_APPLE,
                     t['em_breve'], f'{NOME} — App Store')
         + '</div>'
+        # Na App Store o app tem outro nome (modo amizade, nov/2026).
+        + (f'<p class="lojas-nota">{t["nota_iphone"]}</p>' if LINK_APPLE
+           else '')
     )
 
 
@@ -715,7 +811,8 @@ def jsonld_home(cod, t):
             'name': NOME,
             'description': t['descricao'],
             'applicationCategory': 'SocialNetworkingApplication',
-            'operatingSystem': 'Android',
+            'operatingSystem': 'Android, iOS',
+            'downloadUrl': [u for u in (LINK_PLAY, LINK_APPLE) if u],
             'inLanguage': [IDIOMAS[c]['html_lang'] for c in ORDEM],
             'contentRating': '18+',
             'offers': {'@type': 'Offer', 'price': '0',

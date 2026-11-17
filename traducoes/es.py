@@ -28,6 +28,7 @@ DADOS = {
     'btn_como': 'Ver cómo funciona',
     'notas': ['Gratis', 'Premium sin anuncios', '11 idiomas'],
     'em_breve': 'Muy pronto',
+    'nota_iphone': 'En iPhone, busca <b>Nimo Chat: Fazer Amigos</b>.',
 
     'chat': {
         'nome': 'Lira',
@@ -163,11 +164,14 @@ DADOS = {
          ['18 años. Una cuenta que aparente ser de un menor queda suspendida '
           'de inmediato al ser denunciada, antes incluso de la revisión '
           'humana.']),
+        ('¿Por qué en iPhone tiene otro nombre?',
+         ['En la App Store, Nimo se llama <b>Nimo Chat: Fazer Amigos</b> y funciona un poco distinto: no hay búsqueda aleatoria. La conversación empieza cuando dos personas se dan me gusta en la sección Personas, cuando alguien responde una nota en el Muro o entre amigos.',
+          'La cuenta es la misma en los dos: con el código de recuperación entras en iPhone con la cuenta que ya usas en Android.']),
     ],
 
     'olho_baixar': 'Descargar',
     'h_baixar': 'Una conversación empieza en segundos',
-    'sub_baixar': ('Gratis y sin registro. Disponible para Android. iPhone muy pronto.'),
+    'sub_baixar': ('Gratis y sin registro. Disponible para Android y iPhone.'),
 
     'rodape_sobre': ('Conversaciones anónimas con gente nueva. Sin correo, sin '
                      'teléfono, sin nombre real.'),

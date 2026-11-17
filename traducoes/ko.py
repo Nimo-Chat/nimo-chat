@@ -27,6 +27,7 @@ DADOS = {
     'btn_como': '이용 방법 보기',
     'notas': ['무료 이용', 'Premium은 광고 없음', '11개 언어'],
     'em_breve': '출시 예정',
+    'nota_iphone': 'iPhone에서는 <b>Nimo Chat: Fazer Amigos</b>를 검색하세요.',
 
     'chat': {
         'nome': 'Lira',
@@ -149,11 +150,14 @@ DADOS = {
         ('최소 연령은 몇 살인가요?',
          ['만 18세입니다. 미성년자로 보이는 계정은 신고가 접수되면 사람이 검토하기 '
           '전에 즉시 정지됩니다.']),
+        ('iPhone에서는 왜 앱 이름이 다른가요?',
+         ['App Store에서 Nimo의 이름은 <b>Nimo Chat: Fazer Amigos</b>이고, 조금 다르게 작동합니다. 랜덤 매칭이 없습니다. 대화는 두 사람이 사람 섹션에서 서로 좋아요를 눌렀을 때, 누군가 게시판의 글에 답했을 때, 또는 친구 사이에서 시작됩니다.',
+          '계정은 둘 다 같습니다. 복구 코드로 Android에서 쓰던 계정으로 iPhone에서도 로그인할 수 있습니다.']),
     ],
 
     'olho_baixar': '앱 다운로드',
     'h_baixar': '대화는 몇 초면 시작돼요',
-    'sub_baixar': ('무료, 가입 없음. Android에서 이용 가능. iPhone은 곧 출시.'),
+    'sub_baixar': ('무료, 가입 없음. Android와 iPhone에서 이용 가능.'),
 
     'rodape_sobre': ('처음 만나는 사람과 나누는 익명 대화. 이메일도, 전화번호도, '
                      '실명도 필요 없습니다.'),

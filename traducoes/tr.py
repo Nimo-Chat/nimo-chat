@@ -29,6 +29,7 @@ DADOS = {
     'btn_como': 'Nasıl çalıştığını gör',
     'notas': ['Ücretsiz', 'Premium’da reklam yok', '11 dil'],
     'em_breve': 'Çok yakında',
+    'nota_iphone': 'iPhone’da <b>Nimo Chat: Fazer Amigos</b> adıyla ara.',
 
     'chat': {
         'nome': 'Lira',
@@ -158,11 +159,14 @@ DADOS = {
         ('Yaş sınırı nedir?',
          ['18. Reşit olmayan birine ait göründüğü şikâyet edilen bir hesap, '
           'daha insan incelemesi başlamadan anında askıya alınıyor.']),
+        ('iPhone’da uygulamanın adı neden farklı?',
+         ['App Store’da Nimo’nun adı <b>Nimo Chat: Fazer Amigos</b> ve biraz farklı çalışıyor: rastgele eşleşme yok. Sohbet, iki kişi Kişiler bölümünde birbirini beğendiğinde, biri Duvar’daki bir notu yanıtladığında ya da arkadaşlar arasında başlıyor.',
+          'Hesabın ikisinde de aynı: kurtarma kodunla, Android’de kullandığın hesapla iPhone’da giriş yapabilirsin.']),
     ],
 
     'olho_baixar': 'Uygulamayı indir',
     'h_baixar': 'Bir sohbet saniyeler içinde başlar',
-    'sub_baixar': ('Ücretsiz ve kayıtsız. Android’de mevcut. iPhone çok yakında.'),
+    'sub_baixar': ('Ücretsiz ve kayıtsız. Android ve iPhone’da mevcut.'),
 
     'rodape_sobre': ('Yeni insanlarla anonim sohbetler. E-posta yok, telefon '
                      'numarası yok, gerçek ad yok.'),

@@ -1,0 +1,25 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "MKUJ7QM723.com.leonardomondaine.nimo"
+        ],
+        "components": [
+          {
+            "/": "/r",
+            "comment": "Recado compartilhavel"
+          },
+          {
+            "/": "/r/",
+            "comment": "Recado compartilhavel"
+          },
+          {
+            "/": "/r/*",
+            "comment": "Recado compartilhavel"
+          }
+        ]
+      }
+    ]
+  }
+}

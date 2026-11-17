@@ -28,6 +28,7 @@ DADOS = {
     'btn_como': 'Ansehen, wie es funktioniert',
     'notas': ['Kostenlos', 'Premium ohne Werbung', '11 Sprachen'],
     'em_breve': 'Demnächst',
+    'nota_iphone': 'Auf dem iPhone heißt die App <b>Nimo Chat: Fazer Amigos</b>.',
 
     'chat': {
         'nome': 'Lira',
@@ -170,11 +171,14 @@ DADOS = {
          ['Ab 18. Ein Konto, das nach einer minderjährigen Person aussieht, '
           'wird nach einer Meldung sofort gesperrt — noch bevor ein Mensch es '
           'prüft.']),
+        ('Warum heißt die App auf dem iPhone anders?',
+         ['Im App Store heißt Nimo <b>Nimo Chat: Fazer Amigos</b> und funktioniert etwas anders: Es gibt keine Zufallssuche. Ein Gespräch beginnt, wenn sich zwei Personen im Bereich Personen gegenseitig liken, wenn jemand auf eine Notiz an der Pinnwand antwortet oder unter Freunden.',
+          'Dein Konto funktioniert auf beiden: Mit deinem Wiederherstellungscode meldest du dich auf dem iPhone mit dem Konto an, das du schon auf Android nutzt.']),
     ],
 
     'olho_baixar': 'App holen',
     'h_baixar': 'Ein Gespräch beginnt in Sekunden',
-    'sub_baixar': ('Kostenlos und ohne Anmeldung. Für Android verfügbar. iPhone folgt bald.'),
+    'sub_baixar': ('Kostenlos und ohne Anmeldung. Für Android und iPhone verfügbar.'),
 
     'rodape_sobre': ('Anonyme Gespräche mit neuen Leuten. Keine E-Mail, keine '
                      'Telefonnummer, kein echter Name.'),
